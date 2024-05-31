@@ -7,6 +7,19 @@
     padding-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+    .JoinJuryPageHeader > h3 {
+        font-size: 3vw;
+        padding: 2vw;
+    }        
+}
+
+@media screen and (min-width: 768px) {
+    .JoinJuryPageHeader > h3 {
+        padding: 10px 20px;
+    }    
+}
+
 .JoinJuryPageHeader {
     margin: auto;
     margin-top: -10px;
@@ -15,50 +28,55 @@
 .JoinJuryPageHeader > h3 {
     display: inline;
     background-color: #269ff6;
-    padding: 10px 20px;
     border-radius: 20px;
 }
 
-.StakingInfo {
-    margin: 10px 20px;
+.StakingData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: left;
 }
 
-.Staking {  
-    text-align: left;
-    padding: 20px;
-    background-color: #269ff6;
+.Staking {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
-    border: 1px solid #269ff6;
+    background-color: #269ff6;
+}
 
-    p > span {
-        font-weight: 300;
-        color: rgba(255, 255, 255, .7);
-    }
+.stakingLeft {
+    flex: 60%;
+}
+.stakingRight {
+    flex: 40%;
+    color: rgba(255, 255, 255, .7);
+    font-weight: 300;
 }
 
 .flex_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 992px) {
-    .Staking {
-        width: auto;
-        height: auto;
-        font-size: 1em;
-        margin: 100px 10px;
-    }
     .JoinJuryPage {
         width: 100%;
     }
+    .Staking 
+    {
+        width: auto;
+        font-size: 3vw;
+        margin: 100px 10px;
+    }  
 }
 
 @media only screen and (min-width: 992px) {
     .Staking {
-        width: 586px;
-        height: auto;  
         font-size: 24px;
+        width: 586px;
         margin: 100px 50px;
-    }
+    }    
 }

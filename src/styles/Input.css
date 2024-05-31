@@ -25,14 +25,12 @@ input {
     background-color: transparent;
     /* padding-top: 0.25rem; */
     outline: none;
-    font-size: 18px;
     z-index: 1;
     /* padding-left: 3%; */
     border-radius: 30px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 16px;
     border: 0px;
 }
 
@@ -100,5 +98,19 @@ input :focus {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    input {
+        font-size: 3vw;
+        padding: 2.8vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    input {
+        font-size: 18px;
+        padding: 16px;   
     }
 }

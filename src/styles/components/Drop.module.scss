@@ -15,31 +15,56 @@
 }
 
 .flex_container > h1 {
-    font-size: 32px;
     display: block;
-    padding: 10px 30px;;
     background-color: #d9d9d9;
-}
-
-.line {
-    margin-top: -32px;
-    border-top: 1px solid white;
 }
 
 .flex_container > div {
     margin-bottom: 20px;
 }
 
-.imagepose {
-    background-color: #d9d9d9;
-    width: 385px;
-    height: 357px;
+@media screen and (min-width: 500px) {
+    .imagepose {
+        background-color: #d9d9d9;
+        width: 385px;
+        height: 357px;
+    }
+    
+    .otherpose {
+        background-color: #d9d9d9;
+        width: 385px;
+        height: 72px;
+    }    
+    .flex_container > h1 {
+        font-size: 32px;
+        padding: 10px 30px;
+    }  
+    .line {
+        margin-top: -32px;
+        border-top: 1px solid white;
+    }    
 }
 
-.otherpose {
-    background-color: #d9d9d9;
-    width: 385px;
-    height: 72px;
+@media screen and (max-width: 500px) {
+    .flex_container > h1 {
+        font-size: 5vw;
+        padding: 2.5vw 5vw;
+    }      
+    .imagepose {
+        background-color: #d9d9d9;
+        width: 60vw;
+        height: 60vw;
+    }
+    
+    .otherpose {
+        background-color: #d9d9d9;
+        width: 60vw;
+        height: 12vw;
+    }    
+    .line {
+        margin-top: -5vw;
+        border-top: 1px solid white;
+    }
 }
 
 .dropcontent {

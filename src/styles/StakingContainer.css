@@ -139,16 +139,24 @@
     cursor: pointer;
 }
 
-.LockButton:disabled {
-    background: #2a2828;
+/* .LockButton:disabled {
+    background: #269ff6;
     color: white;
     cursor: unset;
-}
+} */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 500px) {
     .LockButton {
         font-size: 2.5vw;
-        width: 250px;
+        width: 90%;
+        height: 40px;
+    }    
+}
+
+@media screen and (min-width: 500px) {
+    .LockButton {
+        font-size: 2.5vw;
+        width: 30%;
         height: 40px;
     }
 }
@@ -156,7 +164,7 @@
 @media screen and (min-width: 992px) {
     .LockButton {
         font-size: 32px;
-        width: 298px;
+        width: 30%;
         height: 72.67px;
     }    
 }
@@ -296,15 +304,35 @@
     border: 1px solid #269ff6;
     border-radius: 30px;
     justify-content: space-between;
-    width: 80%;
     margin: auto;    
     margin-bottom: 50px;
 }
 
 .inputPanel>p {
     text-wrap: nowrap;
-    padding-left: 40px;
-    padding-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .inputPanel {
+        width: 90%;
+    }
+    .inputPanel>p {
+        padding-right: 10px;
+        padding-left: 10px;
+    }    
+    .inputPrefix {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .inputPanel {
+        width: 80%;
+    }
+    .inputPanel>p {
+        padding-left: 40px;
+        padding-right: 40px;
+    }        
 }
 
 .inputPrefix {

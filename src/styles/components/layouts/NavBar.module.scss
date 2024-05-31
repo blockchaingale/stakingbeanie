@@ -1,23 +1,9 @@
-.beanie {
-    font-size: 32px;
-    line-height: 38.73px;
+ul {
+    padding-inline-start: 0px;
 }
 
-.navlist {
-    list-style: none;
-    li {
-        display: inline;
-        float: left;
-        a {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;            
-            font-size: 20px;
-            line-height: 24.2px;
-            display: block;
-            padding: 0 20px;
-        }
-    }
+.headercontent {
+    padding-top: 30px;
 }
 
 .flex_container {
@@ -32,15 +18,10 @@
     justify-content: space-around;
 }
 
-
 .buybtn {
-    border-radius: 30px;
     text-decoration: none;
-    padding: 15px 25px;
     font-family: Inter;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 24.2px;
     background-color: transparent;
     border: 2px solid #fff;
     color: white;
@@ -52,14 +33,13 @@
     background-color: #fff;
 }
 
+.nav {
+    list-style: none;
+}
+
 .nav .item{
     position:relative;
     display:inline-block;
-    width:100px;
-    height:35px;
-    padding-top:15px;
-    margin-left:7px;
-    margin-right:7px;
     background:transparent;
     z-index:2;
     color:#fff;
@@ -76,40 +56,59 @@ transform:scale(0.7);
 -webkit-transform:scale(0.7);
 }
 .nav .linktext{
-font-size:1em;
-width:100px;
+width: 100px;
 text-align:center;
 position:relative;
 z-index:2;
 color:#fff;
 text-decoration:none;
-font-family:'Black Ops One', 'Righteous', Arial, sans-serif;
 text-transform:uppercase;
 transition:0.3s ease-in-out;
 -webkit-transition:0.3s ease-in-out;
-}
-.nav .item .linktext:before{
-content:'';
-transform:scale(0.2);
--webkit-transform:scale(0.2);
-z-index:-1;
-transition: 0.3s ease-in-out;
--webkit-transition: 0.3s ease-in-out;
-opacity: 0;
-position: absolute;
-top:-55.5px;
-left:-32px;
-height: 100px;
-width: 100px;
-background: none;
-border-radius: 100px;
-border-top: 15px solid #269ff6;
-border-bottom: 15px solid #269ff6;
-border-left: 15px solid transparent;
-border-right: 15px solid transparent;
 }
 .nav .item:hover .linktext{
 color:#269ff6;
 transform:scale(1.3);
 -webkit-transform:scale(1.3);
+}
+
+@media screen and (max-width: 768px) {
+    .linktext {
+        font-size: 2vw;
+        width:75px;
+        height:20px;      
+        margin-left:0.3vw;
+        margin-right:0.3vw;             
+    }    
+    .beanie {
+        font-size: 4vw;
+    }    
+    .buybtn {
+        font-size: 2.5vw;
+        border-radius: 3vw;    
+        padding: 5px 10px;    
+        margin-left:7px;
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .linktext {
+        font-size: 20px;
+        line-height: 24.2px;
+        width:100px;
+        height:35px;        
+        padding-top:15px;
+        margin-left:7px;
+        margin-right:7px;        
+    }
+    .beanie {
+        font-size: 32px;
+        line-height: 38.73px;
+    }    
+    .buybtn {
+        font-size: 20px;
+        line-height: 24.2px;
+        border-radius: 30px;    
+        padding: 15px 25px;        
+    }
 }

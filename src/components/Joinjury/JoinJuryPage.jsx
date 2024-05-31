@@ -21,8 +21,10 @@ const JoinJuryPage = () => {
     const [userAmount, setUserAmount] = useState(0);
     const [tvl, setTvl] = useState(0);
     const [apy, setApy] = useState(100.0);
+    const [err, setError] = useState("");
     const [userPendingRewards, setUserPendingRewards] = useState(0);   
     const [lockingEnabled, setLockingEnabled] = useState(false);
+    const [lockTime, setLockTime] = useState(0);
     // const [userlockingTime, setUserLockingTime] = useState(0);
     // const [lockingduration, setLockingDuration] = useState(0);
     const [userdisablelockingTime, setDisableUnlockingTime] = useState(new Date());
@@ -53,8 +55,9 @@ const JoinJuryPage = () => {
             // setUserLockingTime(lockingTime);
             // setLockingDuration(duration);
             const lockTime = Number(lockingTime);
-            const dura = Number(duration);            
+            const dura = Number(duration);         
             let d = new Date((lockTime + dura) * 1000);
+            setLockTime(lockTime);
             setDisableUnlockingTime(d);
             d = new Date((lockTime + dura + 86400) * 1000);
             setEnableUnlockingTime(d);
@@ -120,6 +123,7 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
+            if(Number(tokenBalance) <= 0)throw "You have no tokens now";
             setConfirming(true);
           let TokenAmounts;
           if (Number(maxSet) === 0) {
@@ -143,6 +147,7 @@ const JoinJuryPage = () => {
              setConfirming(false);
           }, 3000)
         } catch (err) {
+            setError(err);
             setMaxSet(0);
             setConfirming(false);
         }
@@ -175,27 +180,31 @@ const JoinJuryPage = () => {
                     <h3>JOIN THE JURY (30 Day Lock)</h3>
                 </div>
                 <div className={style.Staking}>
-                    <div className={style.StakingInfo}>
-                        <p>TVL : &nbsp; <span>{tvl.toFixed(2)} Test</span> &emsp;  &emsp; &emsp;
-                        <span>${Number(apy).toFixed(2)} k</span></p>
-                    </div>
-                    <div className={style.StakingInfo}>
-                        <p>Your Staked Amount: &emsp;&emsp;&emsp;<span>{userAmount} Test</span></p>
-                    </div>
-                    <div className={style.StakingInfo}>
-                        <p>Pending Reward Amount: &emsp;&emsp;&emsp;<span>{userPendingRewards.toFixed(5)} Test</span></p>
-                    </div>      
-                    <div style={{visibility: tvl ? 'visible' : 'hidden'}}>
-                      <div className={style.StakingInfo}>
-                          <p>Lock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
-                          {userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
-                      </div>         
-                      <div className={style.StakingInfo}>
-                          <p>Unlock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
-                          {userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
-                      </div>                              
-                    </div>
-                </div>            
+                  <div className={style.StakingData}>
+                      <div className={style.stakingLeft}>TVL :</div>
+                      <div className={style.stakingRight}>{tvl.toFixed(2)} Test</div>
+                  </div>
+                  <div className={style.StakingData}>
+                      <div className={style.stakingLeft}>APY :</div>
+                      <div className={style.stakingRight}>{Number(apy).toFixed(2)} %</div>
+                  </div>
+                  <div className={style.StakingData}>
+                      <div className={style.stakingLeft}>Your Staked Amount:</div>
+                      <div className={style.stakingRight}>{userAmount} Test</div>
+                  </div>
+                  <div className={style.StakingData}>
+                      <div className={style.stakingLeft}>Pending Reward Amount:</div>
+                      <div className={style.stakingRight}>{userPendingRewards.toFixed(5)} Test</div>
+                  </div>   
+                      <div className={style.StakingData} style={{visibility: lockTime > 0 ? 'visible' : 'hidden'}}>
+                          <div className={style.stakingLeft}>Lock Date</div>
+                          <div className={style.stakingRight}>{userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</div>
+                      </div>
+                      <div className={style.StakingData} style={{visibility: lockTime > 0 ? 'visible' : 'hidden'}}>
+                          <div className={style.stakingLeft}>Unlock Date</div>
+                          <div className={style.stakingRight}>{userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</div>
+                      </div>     
+                </div>                     
                 <div className={style.flex_container}>
                     <div>
                         <section className='inputPanel'>
@@ -210,47 +219,59 @@ const JoinJuryPage = () => {
                             <p onClick={() => setMaxAmount()} className="MaxButton">Max</p>
                         </section>  
                     </div>
-                    <div>{
-                        Number(tokenAmount) > Number(allowance) ?
+                       {(Number(tokenAmount) > Number(allowance) & Number(tokenBalance) !== 0) ?
                         <section className="LockBox">
                             {confirming === false ?
-                                Number(tokenBalance) > 0 ?
                                 <>
-                                        <p className='Text1'>Please approve Test Token first</p>
-                                        <button disabled={confirming === false ? false : true} onClick={() => onTokenAllowance()} className="LockButton">
-                                        <p>Allow</p>
-                                        </button>
-                                    </>
-                                    :
-                                    <p className='Text1'>You have no tokens now</p>
-                                    :
-                                    <>
-                                    <ClipLoader
-                                        color={'#36d7b7'}
-                                        loading={confirming}
-                                        size={30}
-                                        aria-label="Loading Spinner"
-                                        data-testid="loader"
-                                    />
+                                    <p className='Text1'>Please approve Test Token first</p>
+                                    <button disabled={confirming === false ? false : true} onClick={() => onTokenAllowance()} className="LockButton">
+                                    <p>Allow</p>
+                                    </button>
+                                </>
+                              :
+                                <>
+                                  <ClipLoader
+                                      color={'#36d7b7'}
+                                      loading={confirming}
+                                      size={30}
+                                      aria-label="Loading Spinner"
+                                      data-testid="loader"
+                                  />
                                 </>
                             }
                         </section>    
-                        :                  
+                        :       
+                        <>
                         <section className="claimBox">
-                            <button disabled={tokenAmount > 0 ? false : true} onClick={() => onTokenStake(tokenAmount)} className="LockButton">Stake $BEAN</button>
-                            {Number(userPendingRewards) > 0 ?
-                            <button disabled={false} onClick={onTokenClaim} className="LockButton">Claim $BEAN</button>
-                            :
-                            <></>
-                            }
-                            {Number(userAmount) > 0 ?
-                            <button disabled={lockingEnabled === true ? false : true} onClick={() => onTokenWithdraw()} className="LockButton">Withdraw $BEAN</button>
-                            :
-                            <></>
-                            }
+                          {confirming === false ?
+                            <>
+                              <button onClick={() => onTokenStake(tokenAmount)} className="LockButton">Stake $BEAN</button>
+                              {Number(userPendingRewards) > 0 ?
+                                <button disabled={false} onClick={onTokenClaim} className="LockButton">Claim $BEAN</button>
+                                :
+                                <></>
+                              }
+                              {Number(userAmount) > 0 ?
+                                <button disabled={lockingEnabled === true ? false : true} onClick={() => onTokenWithdraw()} className="LockButton">Withdraw $BEAN</button>
+                                :
+                                <>
+                                </>
+                              } 
+                            </>:
+                            <ClipLoader
+                            color={'#36d7b7'}
+                            loading={confirming}
+                            size={30}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                            />                            
+                          }
+                        </section>    
+                        <section>
+                            {err?<p className="Text1">{err}</p>:<></>}
                         </section>
-                        }
-                    </div>
+                        </>            
+                    }
                 </div>
             </div>
         </div>

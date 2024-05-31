@@ -22,6 +22,8 @@ const About: React.FC<{}> = () => {
             <h2 className={style.network}>The digital advocate of the BASE network</h2>
             <br/>
             <hr style={{color: 'white'}}/>
+            <br/>
+            <br/>
         </div>
     )
 }
