@@ -31,6 +31,8 @@
     background-color: #d9d9d9;
 }
 
+
+
 @media screen and (max-width: 992px) {
     .footername {
         font-size: 3vw;
@@ -38,6 +40,9 @@
     .line {
         margin-top: -3vw;
     }
+    .footertitle {
+        font-size: 48px;
+    }    
 }
 
 @media screen and (min-width: 992px) {
@@ -46,5 +51,8 @@
     }  
     .line {
         margin-top: -32px;
+    }
+    .footertitle {
+        font-size: 72px;
     }
 }
