@@ -16,9 +16,18 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Inter';
 }
 
-.content {
-    width: 80%;
-    margin: auto;
+@media screen and (max-width: 992px) {
+    .content {
+        width: 90%;
+        margin: auto;
+    }    
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        width: 80%;
+        margin: auto;
+    }    
 }
 
 hr {

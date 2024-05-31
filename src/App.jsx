@@ -61,16 +61,6 @@ const wagmiConfig = createConfig({
 })
 const ethereumClient = new EthereumClient(wagmiConfig, chains);
 const App = () => {
-    useEffect(() => {
-      let navitems = document.querySelectorAll('#navitem');
-      navitems?.forEach(navitem=> {
-        navitem.addEventListener('click', () => {   
-          var speed = 0;       
-          var top = document.getElementById('Tokenomics').offsetTop;
-          document.getElementsById('root').animate({scrollTop: top}, speed, 'swing');
-        })
-      })
-    }, []);
   return (
     <Router>
       <QueryParamProvider>
@@ -80,10 +70,18 @@ const App = () => {
             <div className={styles.content}>
               <Route exact path="/">
                 <Header />
-                <About id="About"/>
-                <TheJury id="TheJury"/>
-                <Tokenomics id="Tokenomics"/>
-                <Drop id="Drop"/>
+                <div id="About">
+                  <About/>
+                </div>
+                <div id="TheJury">
+                  <TheJury/>
+                </div>
+                <div id="Tokenomics">
+                  <Tokenomics/>
+                </div>
+                <div id="Drop">
+                  <Drop />
+                </div>
                 <Footer/>
               </Route>
               <Route exact path="/JoinJury">

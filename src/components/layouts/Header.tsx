@@ -9,10 +9,10 @@ const Header: React.FC<{}> = () => {
           </div>
           <div>
             <ul className={style.nav}>
-              <li className={style.item}><a id="navitem" className={style.linktext} href="#About">about</a></li>
-              <li className={style.item}><a id="navitem" className={style.linktext} href="#TheJury">the jury</a></li>
-              <li className={style.item}><a id="navitem" className={style.linktext} href="#Tokenomics">tokenomics</a></li>
-              <li className={style.item}><a id="navitem" className={style.linktext} href="#Drop">game</a></li>
+              <li className={style.item}><a className={style.linktext} href="#About">about</a></li>
+              <li className={style.item}><a className={style.linktext} href="#TheJury">the jury</a></li>
+              <li className={style.item}><a className={style.linktext} href="#Tokenomics">tokenomics</a></li>
+              <li className={style.item}><a className={style.linktext} href="#Drop">game</a></li>
             </ul>
           </div>
           <div className={style.flex_right}>
