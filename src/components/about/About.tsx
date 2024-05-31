@@ -14,7 +14,7 @@ const About: React.FC<{}> = () => {
                     <p>While some say do it for the meme,<br/> Beanie says do it for the $BEAN</p>
                     <span>
                         <br/>
-                        <a href="http://web.telegram.org"><img src="./assets/image/telegram.png" alt="telegram"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="http://t.me"><img src="./assets/image/telegram.png" alt="telegram"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="http://www.twitter.com"><img src="./assets/image/twitter.png" alt="twitters"/></a>
                     </span>
                 </div>

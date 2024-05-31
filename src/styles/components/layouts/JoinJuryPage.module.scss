@@ -1,9 +1,10 @@
 .JoinJuryPage {
     background-color: white;
-    border-radius: 77px;
-    height: 100vh;
+    border-radius: 30px;
+    height: auto;
     border: 3px solid #269ff6;
     text-align: center;    
+    padding-bottom: 50px;
 }
 
 .JoinJuryPageHeader {
@@ -38,6 +39,7 @@
 .flex_container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 992px) {

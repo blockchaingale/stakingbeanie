@@ -12,7 +12,7 @@ const Footer: React.FC<{}> = () => {
             </div> 
             <div className={style.footer}>
                 <div className={style.flex_container}>      
-                    <div><a href="http://web.telegram.org"><img src="./assets/image/twitter.png" alt="telegram" width='150%'/></a></div>
+                    <div><a href="http://t.me"><img src="./assets/image/twitter.png" alt="telegram" width='150%'/></a></div>
                     <div><a href="http://www.twitter.com"><img src="./assets/image/telegram.png" alt="twitters" width='150%'/></a></div>
                     <div><h1 style={{fontSize:'10vw'}}>BASEDBEANIE</h1></div>
                     <div><p style={{textAlign:'center'}}>$BEANIE is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. <br/>
