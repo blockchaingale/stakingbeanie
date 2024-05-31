@@ -153,10 +153,10 @@
     }    
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 992px) {
     .LockButton {
         font-size: 2.5vw;
-        width: 30%;
+        width: 50%;
         height: 40px;
     }
 }
@@ -166,6 +166,9 @@
         font-size: 32px;
         width: 30%;
         height: 72.67px;
+    }    
+    .LockBox .LockButton {
+        width: 150px;
     }    
 }
 

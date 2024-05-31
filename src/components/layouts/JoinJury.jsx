@@ -49,8 +49,12 @@ const JoinJury = () => {
 
     return (
       <>
+
       { !isConnected ?
         <div className={style.flex_container}>
+            <div className={style.backbtn}>
+                <a href="/">Back</a>
+            </div>                          
             <div className={style.enter}>
                 <h2>ENTER APP</h2>
                 <br/>

@@ -31,7 +31,7 @@ const JoinJuryPage = () => {
     const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0x44dd110A3b06Ed94C07b47E2CC3C19F6e4E25671";
+    const StakingAddress = "0xa2533C00c69B1B9A2d6E015793647b8B0b9377ac";
     const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";    
     
     useEffect(() => {
@@ -43,8 +43,9 @@ const JoinJuryPage = () => {
             const lockingTime = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'userLockingTime', args: [address]});
             const duration = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'lockingTime'});
             const rewardPerYear = Number(totalInfo[1]) * 60 * 60 * 24 * 365;
-            const APY = ((rewardPerYear / (Number(totalInfo[0]))) + 1) * 100;
-            setApy(APY ? APY : 100.0);
+            console.log(totalInfo);
+            const APY = ((rewardPerYear / (Number(totalInfo[0])))) * 100;
+            setApy(APY ? APY : 0.0);
             setTvl(Number(totalInfo[0]) / Math.pow(10, 18));
             setUserAmount(Number(totalInfo[2]) / Math.pow(10, 18));
             setUserPendingRewards(Number(totalInfo[3]) / Math.pow(10, 18));
@@ -57,6 +58,7 @@ const JoinJuryPage = () => {
             const lockTime = Number(lockingTime);
             const dura = Number(duration);         
             let d = new Date((lockTime + dura) * 1000);
+            console.log(lockTime, dura, d);            
             setLockTime(lockTime);
             setDisableUnlockingTime(d);
             d = new Date((lockTime + dura + 86400) * 1000);
@@ -179,29 +181,38 @@ const JoinJuryPage = () => {
                 <div className={style.JoinJuryPageHeader}>
                     <h3>JOIN THE JURY (30 Day Lock)</h3>
                 </div>
+                <div className={style.backbtn}>
+                    <a href="/">Back</a>
+                </div>
                 <div className={style.Staking}>
-                  <div className={style.StakingData}>
+                  {/* <div className={style.StakingData}>
                       <div className={style.stakingLeft}>TVL :</div>
+                      <div className={style.stakingMiddle}></div>
                       <div className={style.stakingRight}>{tvl.toFixed(2)} Test</div>
                   </div>
                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>APY :</div>
+                      <div className={style.stakingMiddle}></div>
                       <div className={style.stakingRight}>{Number(apy).toFixed(2)} %</div>
-                  </div>
+                  </div> */}
                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>Your Staked Amount:</div>
+                      <div className={style.stakingMiddle}></div>
                       <div className={style.stakingRight}>{userAmount} Test</div>
                   </div>
                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>Pending Reward Amount:</div>
+                      <div className={style.stakingMiddle}></div>
                       <div className={style.stakingRight}>{userPendingRewards.toFixed(5)} Test</div>
                   </div>   
                       <div className={style.StakingData} style={{visibility: lockTime > 0 ? 'visible' : 'hidden'}}>
-                          <div className={style.stakingLeft}>Lock Date</div>
+                          <div className={style.stakingLeft}>Lock Date:</div>
+                          <div className={style.stakingMiddle}></div>
                           <div className={style.stakingRight}>{userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</div>
                       </div>
                       <div className={style.StakingData} style={{visibility: lockTime > 0 ? 'visible' : 'hidden'}}>
-                          <div className={style.stakingLeft}>Unlock Date</div>
+                          <div className={style.stakingLeft}>Unlock Date:</div>
+                          <div className={style.stakingMiddle}></div>
                           <div className={style.stakingRight}>{userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</div>
                       </div>     
                 </div>                     

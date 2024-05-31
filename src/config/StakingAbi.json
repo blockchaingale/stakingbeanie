@@ -347,11 +347,6 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_rewardAmount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
                 "name": "_pid",
                 "type": "uint256"
             }

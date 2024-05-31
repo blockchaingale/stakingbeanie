@@ -1,9 +1,23 @@
+.backbtn {
+    
+    margin: 5vw;
+    padding: 10px;
+    display: inline-block;
+    text-align: left;
+    background-color: #269ff6;
+    border-radius: 10%;    
+    a {
+        color: white;        
+        text-decoration: none;
+    }
+}
+
 .JoinJuryPage {
     background-color: white;
     border-radius: 30px;
     height: auto;
     border: 3px solid #269ff6;
-    text-align: center;    
+      
     padding-bottom: 50px;
 }
 
@@ -23,6 +37,7 @@
 .JoinJuryPageHeader {
     margin: auto;
     margin-top: -10px;
+    text-align: center;  
 }
 
 .JoinJuryPageHeader > h3 {
@@ -48,13 +63,19 @@
 }
 
 .stakingLeft {
-    flex: 60%;
+    flex: 50%;
+    text-align: right;
 }
 .stakingRight {
-    flex: 40%;
+    flex: 45%;
     color: rgba(255, 255, 255, .7);
     font-weight: 300;
+    text-align: left;
 }
+.stakingMiddle {
+    flex: 5%;
+}
+
 
 .flex_container {
     display: flex;
