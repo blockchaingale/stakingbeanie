@@ -36,13 +36,13 @@ const Header = () => {
     useEffect(() => {
         const switchChain = async () => {
             try {
-                switchNetwork?.(97)
+                switchNetwork?.(11155111)
             } catch (e) {
                 console.error(e)
             }
         }
         if (isConnected === true) {
-            if (chain.id !== 97)
+            if (chain.id !== 11155111)
                 switchChain();
         }
     }, [isConnected, chain, switchNetwork])
@@ -64,7 +64,7 @@ const Header = () => {
                                 </>
                                 :
                                 <section className={styles.ConnectWalletSection}>
-                                    {chain?.id === 97 ?
+                                    {chain?.id === 11155111 ?
                                         <button
                                             className="ConnectButton" type="submit"
                                             onClick={() => onConnect()}
@@ -74,9 +74,9 @@ const Header = () => {
                                         :
                                         <button
                                             className="ConnectButton" type="submit"
-                                            onClick={() => switchNetwork?.(97)}
+                                            onClick={() => switchNetwork?.(11155111)}
                                         >
-                                            {'To ETH'}
+                                            {'To Sepolia'}
                                             {isLoading && pendingChainId === 5 && ' (switching)'}
                                         </button>
                                     }

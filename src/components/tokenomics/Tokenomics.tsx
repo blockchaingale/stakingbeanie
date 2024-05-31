@@ -6,7 +6,7 @@ import { readContract } from '@wagmi/core'
 import TokenAbi from '../../config/TokenAbi.json'
 
 const Tokenomics: React.FC<{}> = () => {
-    const TokenAddress = "0x24DE1F3f25b1Cdb054A4562b72B4f8f5C36A53bf";     
+    const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";     
     const [tokenAmount, setTokenAmount] = useState(0);
     const { address, isConnected } = useAccount();
     const { chain } = useNetwork();    
@@ -19,7 +19,7 @@ const Tokenomics: React.FC<{}> = () => {
             console.error(e)
           }
         }
-        if (isConnected === true && chain?.id === 97 && address) {
+        if (isConnected === true && chain?.id === 11155111 && address) {
           FetchStakingData();
         }
       }, [isConnected, address, chain])    

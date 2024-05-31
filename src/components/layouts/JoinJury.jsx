@@ -24,13 +24,13 @@ const JoinJury = () => {
     useEffect(() => {
         const switchChain = async () => {
           try {
-            switchNetwork?.(97)
+            switchNetwork?.(11155111)
           } catch (e) {
             console.error(e)
           }
         }
         if (isConnected === true) {
-          if (chain?.id !== 97)
+          if (chain?.id !== 11155111)
             switchChain();
         }
     }, [isConnected, chain?.id, switchNetwork])
@@ -64,7 +64,7 @@ const JoinJury = () => {
                 </>
                 :
                 <section className={style.ConnectWalletSection}>
-                    {chain?.id === 97 ?
+                    {chain?.id === 11155111 ?
                         <button
                             className={style.joinbtn} type="submit"
                             onClick={() => onConnect()}
@@ -74,7 +74,7 @@ const JoinJury = () => {
                         :
                         <button
                             className={style.joinbtn} type="submit"
-                            onClick={() => switchNetwork?.(97)}
+                            onClick={() => switchNetwork?.(11155111)}
                         >
                             {'#DOIT'}
                             {isLoading && pendingChainId === 5 && ' (switching)'}

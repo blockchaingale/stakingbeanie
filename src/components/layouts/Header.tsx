@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "../../styles/components/layouts/NavBar.module.scss";
 
-const Header: React.FC<{}> = props => {
+const Header: React.FC<{}> = () => {
   return (
       <div className={style.flex_container}>
           <div className={style.flex_left}>
@@ -16,7 +16,7 @@ const Header: React.FC<{}> = props => {
             </ul>
           </div>
           <div className={style.flex_right}>
-            <button className={style.buybtn}>Buy $BEAN</button>
+            <a className={style.buybtn} href="https://app.uniswap.org/">Buy $BEAN</a>
           </div>
         </div>
   )

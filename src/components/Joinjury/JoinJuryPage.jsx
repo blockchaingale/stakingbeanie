@@ -29,8 +29,8 @@ const JoinJuryPage = () => {
     const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0xF4a03609CE2bD5a12EC20f8427D205867A799887";
-    const TokenAddress = "0x24DE1F3f25b1Cdb054A4562b72B4f8f5C36A53bf";    
+    const StakingAddress = "0x44dd110A3b06Ed94C07b47E2CC3C19F6e4E25671";
+    const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";    
     
     useEffect(() => {
         const FetchStakingData = async () => {
@@ -62,7 +62,7 @@ const JoinJuryPage = () => {
             console.error(e)
           }
         }
-        if (isConnected === true && chain?.id === 97 && address && (confirming === false)) {
+        if (isConnected === true && chain?.id === 11155111 && address && (confirming === false)) {
           FetchStakingData();
         }
       }, [isConnected, address, chain, confirming])
