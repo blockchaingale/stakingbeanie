@@ -20,7 +20,7 @@ const JoinJuryPage = () => {
     const [maxSet, setMaxSet] = useState(0);    
     const [userAmount, setUserAmount] = useState(0);
     const [tvl, setTvl] = useState(0);
-    const [apy, setApy] = useState(0);
+    const [apy, setApy] = useState(100.0);
     const [userPendingRewards, setUserPendingRewards] = useState(0);   
     const [lockingEnabled, setLockingEnabled] = useState(false);
     // const [userlockingTime, setUserLockingTime] = useState(0);
@@ -41,8 +41,8 @@ const JoinJuryPage = () => {
             const lockingTime = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'userLockingTime', args: [address]});
             const duration = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'lockingTime'});
             const rewardPerYear = Number(totalInfo[1]) * 60 * 60 * 24 * 365;
-            const APY = ((rewardPerYear / (Number(totalInfo[0]))) + 1) * 100
-            setApy(APY);
+            const APY = ((rewardPerYear / (Number(totalInfo[0]))) + 1) * 100;
+            setApy(APY ? APY : 100.0);
             setTvl(Number(totalInfo[0]) / Math.pow(10, 18));
             setUserAmount(Number(totalInfo[2]) / Math.pow(10, 18));
             setUserPendingRewards(Number(totalInfo[3]) / Math.pow(10, 18));
@@ -177,7 +177,7 @@ const JoinJuryPage = () => {
                 <div className={style.Staking}>
                     <div className={style.StakingInfo}>
                         <p>TVL : &nbsp; <span>{tvl.toFixed(2)} Test</span> &emsp;  &emsp; &emsp;
-                        $&nbsp; <span>{Number(apy).toFixed(2)} k</span></p>
+                        <span>${Number(apy).toFixed(2)} k</span></p>
                     </div>
                     <div className={style.StakingInfo}>
                         <p>Your Staked Amount: &emsp;&emsp;&emsp;<span>{userAmount} Test</span></p>
@@ -185,14 +185,16 @@ const JoinJuryPage = () => {
                     <div className={style.StakingInfo}>
                         <p>Pending Reward Amount: &emsp;&emsp;&emsp;<span>{userPendingRewards.toFixed(5)} Test</span></p>
                     </div>      
-                    <div className={style.StakingInfo}>
-                        <p>Lock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
-                        {userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
-                    </div>         
-                    <div className={style.StakingInfo}>
-                        <p>Unlock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
-                        {userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
-                    </div>                              
+                    <div style={{visibility: tvl ? 'visible' : 'hidden'}}>
+                      <div className={style.StakingInfo}>
+                          <p>Lock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
+                          {userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
+                      </div>         
+                      <div className={style.StakingInfo}>
+                          <p>Unlock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
+                          {userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
+                      </div>                              
+                    </div>
                 </div>            
                 <div className={style.flex_container}>
                     <div>

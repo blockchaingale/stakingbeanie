@@ -60,7 +60,6 @@ const wagmiConfig = createConfig({
   publicClient
 })
 const ethereumClient = new EthereumClient(wagmiConfig, chains);
-
 const App = () => {
     useEffect(() => {
       let navitems = document.querySelectorAll('#navitem');
@@ -75,7 +74,7 @@ const App = () => {
   return (
     <Router>
       <QueryParamProvider>
-      <div className={styles.App}>
+      <div className={styles.App} style={{ height: 'auto'}}>
         <WagmiConfig config={config}>
           <Switch>
             <div className={styles.content}>
