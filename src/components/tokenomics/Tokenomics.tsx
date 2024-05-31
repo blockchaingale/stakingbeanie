@@ -6,7 +6,7 @@ import { readContract } from '@wagmi/core'
 import TokenAbi from '../../config/TokenAbi.json'
 
 const Tokenomics: React.FC<{}> = () => {
-    const TokenAddress = "0xCe3BA2dA32f08C7dB21C099fdee2BebF974D27bd";     
+    const TokenAddress = "0x24DE1F3f25b1Cdb054A4562b72B4f8f5C36A53bf";     
     const [tokenAmount, setTokenAmount] = useState(0);
     const { address, isConnected } = useAccount();
     const { chain } = useNetwork();    

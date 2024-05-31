@@ -23,10 +23,14 @@ const JoinJuryPage = () => {
     const [apy, setApy] = useState(0);
     const [userPendingRewards, setUserPendingRewards] = useState(0);   
     const [lockingEnabled, setLockingEnabled] = useState(false);
+    // const [userlockingTime, setUserLockingTime] = useState(0);
+    // const [lockingduration, setLockingDuration] = useState(0);
+    const [userdisablelockingTime, setDisableUnlockingTime] = useState(new Date());
+    const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0xCe64eD692013c68D357790CB0d0A1Cc226d556a5";
-    const TokenAddress = "0xCe3BA2dA32f08C7dB21C099fdee2BebF974D27bd";    
+    const StakingAddress = "0xF4a03609CE2bD5a12EC20f8427D205867A799887";
+    const TokenAddress = "0x24DE1F3f25b1Cdb054A4562b72B4f8f5C36A53bf";    
     
     useEffect(() => {
         const FetchStakingData = async () => {
@@ -34,6 +38,8 @@ const JoinJuryPage = () => {
             const totalInfo = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'totalInfo', args: [address, '1'] });
             const tokenAllowance = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'allowance', args: [address, StakingAddress] });
             const tokenAmount = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'balanceOf', args: [address] });
+            const lockingTime = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'userLockingTime', args: [address]});
+            const duration = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'lockingTime'});
             const rewardPerYear = Number(totalInfo[1]) * 60 * 60 * 24 * 365;
             const APY = ((rewardPerYear / (Number(totalInfo[0]))) + 1) * 100
             setApy(APY);
@@ -44,6 +50,14 @@ const JoinJuryPage = () => {
             setAllowance(Number(tokenAllowance) / Math.pow(10, 18));
             setTokenBalance(tokenAmount);
             setMaxBalance(tokenAmount);
+            // setUserLockingTime(lockingTime);
+            // setLockingDuration(duration);
+            const lockTime = Number(lockingTime);
+            const dura = Number(duration);            
+            let d = new Date((lockTime + dura) * 1000);
+            setDisableUnlockingTime(d);
+            d = new Date((lockTime + dura + 86400) * 1000);
+            setEnableUnlockingTime(d);
           } catch (e) {
             console.error(e)
           }
@@ -162,20 +176,22 @@ const JoinJuryPage = () => {
                 </div>
                 <div className={style.Staking}>
                     <div className={style.StakingInfo}>
-                        <p>TVL : &nbsp; <span>{tvl.toFixed(0)} Test</span> &nbsp;  &nbsp; 
-                            $&nbsp; <span>{Number(apy).toFixed(2)} k</span> &nbsp;  &nbsp;</p>
+                        <p>TVL : &nbsp; <span>{tvl.toFixed(2)} Test</span> &emsp;  &emsp; &emsp;
+                        $&nbsp; <span>{Number(apy).toFixed(2)} k</span></p>
                     </div>
                     <div className={style.StakingInfo}>
-                        <p>Your Staked Amount: <span>{userAmount}</span> Test</p>
+                        <p>Your Staked Amount: &emsp;&emsp;&emsp;<span>{userAmount} Test</span></p>
                     </div>
                     <div className={style.StakingInfo}>
-                        <p>Pending Reward Amount: <span>{userPendingRewards.toFixed(2)} Test</span></p>
+                        <p>Pending Reward Amount: &emsp;&emsp;&emsp;<span>{userPendingRewards.toFixed(5)} Test</span></p>
                     </div>      
                     <div className={style.StakingInfo}>
-                        <p>Lock Date <span>{'17/09/2024'}</span></p>  
+                        <p>Lock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
+                        {userdisablelockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
                     </div>         
                     <div className={style.StakingInfo}>
-                        <p>Unlock Date <span>{'17/10/2024'}</span></p>  
+                        <p>Unlock Date &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span>
+                        {userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</span></p>  
                     </div>                              
                 </div>            
                 <div className={style.flex_container}>
