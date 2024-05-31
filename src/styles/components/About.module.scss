@@ -1,0 +1,41 @@
+.network {
+    font-stretch: ultra-expanded;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.about {
+    margin: auto;
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.description {
+    h4, h1 {
+        text-transform: uppercase;
+    }
+}
+
+.description > h1 {
+    font-size: 64px;
+    line-height: 77.45px;
+}
+
+.description > h4 {
+    font-size: 20px;
+    line-height: 24.2px;
+}
+
+.description > p {
+    font-size: 20px;
+    line-height: 24.2px;
+}

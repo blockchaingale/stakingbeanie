@@ -1,0 +1,56 @@
+.JoinJuryPage {
+    background-color: white;
+    border-radius: 77px;
+    height: 100vh;
+    border: 3px solid #269ff6;
+    text-align: center;    
+}
+
+.JoinJuryPageHeader {
+    margin: auto;
+    margin-top: -10px;
+}
+
+.JoinJuryPageHeader > h3 {
+    display: inline;
+    background-color: #269ff6;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.StakingInfo {
+    margin: 10px 20px;
+}
+
+.Staking {  
+    text-align: left;
+    padding: 20px;
+    background-color: #269ff6;
+    border-radius: 5px;
+    border: 1px solid #269ff6;
+    margin: 100px 50px;
+    p > span {
+        font-weight: 300;
+    }
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 992px) {
+    .Staking {
+        width: auto;
+        height: auto;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .Staking {
+        width: 586px;
+        height: auto;  
+        font-size: 24px;
+    }
+}

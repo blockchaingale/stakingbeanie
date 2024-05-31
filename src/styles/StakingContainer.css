@@ -1,0 +1,573 @@
+.HeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+    position: relative;
+}
+
+.HeaderLine {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 1px;
+    margin-top: 10px;
+    background-color: transparent;
+    background-image: radial-gradient(circle, #579250 0, transparent 100%);
+}
+
+
+.bnbPoolContentLine {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 1px;
+    margin-top: 10px;
+    background-color: transparent;
+    background-image: radial-gradient(circle, #8620c7 0, transparent 100%);
+}
+
+.BalanceSection {
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    width: 90%;
+    margin: 5px;
+}
+
+
+.footer {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.contractAddress {
+    box-sizing: border-box;
+    width: 12%;
+    height: 40px;
+}
+
+
+
+.DateText {
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    padding-right: 20px;
+}
+
+.claimBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ContractContainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-top: 10px 10px 30px 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desriptionText{
+    font-size: 16px;
+    line-height: 1.4375em;
+    font-weight: 400;
+    color: #b6b6b6;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Text1 {
+    color: #ada6a6;
+    font-size: 20px;
+}
+
+.Text2 {
+    color: #c80b0b;
+}
+
+
+
+.LockButton {
+    color: #fff;
+    margin-top: 10px;
+    --qodef-gradient-color: #ffffff;
+    transition: background-position .9s cubic-bezier(.25,.1,.14,.91),color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    line-height: 20px;
+    align-items: center;
+    border: 1px solid #269ff6;
+    background-color: #269ff6;
+    cursor: pointer;
+}
+
+.LockButton:hover {
+    background: radial-gradient(306.12% 3126.18% at 16.67% 33.7%, #cef8f6 0%, #d0f0eb 84.12%, #a0afae 100%);
+    text-decoration: none;
+}
+
+.LockButton:active {
+    background-color: transparent;
+    color: white;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.LockButton:disabled {
+    background: #2a2828;
+    color: white;
+    cursor: unset;
+}
+
+@media screen and (max-width: 992px) {
+    .LockButton {
+        font-size: 2.5vw;
+        width: 250px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .LockButton {
+        font-size: 32px;
+        width: 298px;
+        height: 72.67px;
+    }    
+}
+
+.LockBox {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.MainDashboard {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MaxButton {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-image-slice: 1;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    font-weight: 100;
+    color: #fff;
+    transition: 0.1s ease-in-out;
+    height: initial;
+    cursor: pointer;
+    margin: 0px;
+    line-height: 1.33334em;
+    --qodef-gradient-color: #ffffff;
+    background: #269ff6;
+    background-size: 100% 100%,90% 100%;
+    background-position: 0 0,-800% 0;
+    background-repeat: no-repeat;
+    transition: background-position .9s cubic-bezier(.25,.1,.14,.91),color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+}
+
+.ConnectWalletBox {
+    text-align: center;
+    height: -webkit-fill-available;
+    margin: auto;
+    /* margin-bottom: 200px; */
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.ConnectWalletBoxButton {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.SpinnerBox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ConnectWalletAgain {
+    width: 100%;
+    text-align: -webkit-center;
+    height: 30%;
+    margin-bottom: 30%;
+}
+
+.ButtonContainer {
+    text-align: center;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ConnectButton {
+    width: 187px;
+    outline: none;
+    border: 0px solid transparent;
+    border-image-slice: 1;
+    font-size: 15px;
+    font-weight: 700;
+    height: 90%;
+    cursor: pointer;
+    background: #3370ff;
+    padding: 7px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 20px;
+    display: block;
+}
+
+.ConnectButton:active {
+    background-color: transparent;
+    color: #26c5eb;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.ConnectButton:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.ConnectButton:disabled {
+    background-color: #a6a6a6;
+    box-shadow: none;
+    cursor: no-drop;
+}
+
+
+.GlobalContainer {
+    background-color: #2a2828;
+    background-size: cover;
+    color: white;
+    width: auto;
+    position: relative;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-radius: 70px;
+    margin: auto 20px;
+}
+
+
+.inputPanel {
+    display: flex;
+    /* align-items: center; */
+    border: 1px solid #269ff6;
+    border-radius: 30px;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;    
+    margin-bottom: 50px;
+}
+
+.inputPanel>p {
+    text-wrap: nowrap;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.inputPrefix {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.inputPanelHeader {
+    display: flex;
+    width: -webkit-fill-available;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.DashboardContainer {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    /* height: 50px; */
+}
+
+.LpBalance {
+    display: flex;
+    width: 80%;
+    /* padding: 0px 30px 0px 30px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.StakingBox {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+
+.StakingBox1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.StakingInfo{
+    display: flex;
+}
+
+.ContractContentTextTitle {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.ContractContentTextTitlePlan{
+    position: absolute;
+    margin: 0px;
+    padding: 10px 25px;
+    margin-left: 50px;
+    background: #3370ff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.PlanBox{
+    width: 50%;
+}
+
+.accountDetail {
+    display: flex;
+}
+
+.accountData {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.withdrawContent {
+    width: -webkit-fill-available;
+    display: flex;
+}
+
+.LoadingBox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FirstNote {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.HeaderText {
+    font-size: 20px;
+    text-align: initial;
+    font-weight: 500;
+}
+
+.HeaderContent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.HeaderList {
+    text-align: initial;
+}
+
+.HeaderOfferText {
+    text-align: initial;
+    font-size: 17px;
+}
+
+.HeaderList>li {
+    padding-bottom: 5px;
+}
+
+.StakingBoxs{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #232121;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    padding-bottom: 20px;
+    width: -webkit-fill-available;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 3px solid transparent;
+    padding-top: 30px;
+}
+
+.StakingBoxs:hover{
+    border: 3px solid #3370ff;
+}
+
+.StakingContents{
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 1600px) {
+    .withdrawContent {
+        flex-direction: column;
+    }
+
+    .ContractContainer {
+        width: 100%;
+    }
+    .StakingBox > div {
+        justify-content: space-between;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    .StakingContents{
+        flex-direction: column;
+    }
+    .PlanBox{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .LpBalance {
+        width: 100%;
+        padding: 0px;
+    }
+    .UserBalance {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .LpBalance {
+        width: 90%;
+        padding: 0px;
+    }
+    .StakingBox{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .GlobalContainer {
+        padding: 0px;
+    }
+    .ContractContentTextTitlePlan{
+        width: 40%;
+    }
+
+    .HeaderContainer {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .BalanceSection {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .contractAddress {
+        width: auto;
+    }
+
+    .inputPanel {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .inputPanelHeader {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .inputPanelHeaderContainer {
+        flex-direction: row;
+    }
+
+    .MaxButton {
+        padding: 14px;
+    }
+
+    .ContractContainer {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .DashboardContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

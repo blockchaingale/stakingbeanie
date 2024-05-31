@@ -1,0 +1,54 @@
+.App {
+    height: 3012px;
+    background-color: #d9d9d9;
+    width: 100%;
+    margin: auto;
+    // .HeaderContainer {
+    //     border: 0px solid #fff;
+    //     padding: 1rem 1.5rem 0 1.5rem;
+    //     margin: 0 auto;
+    //     max-width: 646px;
+    //     height: 550px;
+    //     border-radius: 2rem;
+    //     transition: 0.7s ease-in-out;
+    //     background: linear-gradient(#234e5a, #47656c) padding-box, linear-gradient(#FFFFFF 10%, #00A8C5 100%, #00A8C5 51%, #FFFFFF 8%) border-box;
+    //     border: 1px solid #0000;
+    //     box-shadow: 0px 4px 24px 1px rgba(35, 16, 94, 0.25);
+    //     backdrop-filter: blur(45px);
+    //     border-radius: 40px;
+    //     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.09), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.08), 0px 24px 32px rgba(0, 0, 0, 0.09);
+    //     &:hover {
+    //         transform: scale(1);
+    //         cursor: default;
+    //     }
+    //     h1 {
+    //         text-align: center;
+    //         font-size: 36px;
+    //         letter-spacing: 1px;
+    //         letter-spacing: 2px;
+    //         color: #002a57;
+    //         line-height: 0rem;
+    //     }
+    // }
+}
+
+body {
+    font-weight: bolder;
+    font-family: 'Inter';
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color: white;    
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+hr {
+    display: block;
+    border-top: 1px solid white;
+}

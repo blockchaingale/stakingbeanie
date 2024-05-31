@@ -1,0 +1,72 @@
+.tokenomics {
+    background-color: rgba(38, 159, 246, .35);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 50px 50px;
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;    
+}
+
+.flex_container > div > h1 {
+    font-size: 48px;
+}
+
+.address {
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    padding-bottom: 30px;
+}
+
+.swapinfo {
+    border-radius: 30px;     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+.swaps {
+    text-align: center;
+    padding: 10px 30px;
+    flex: 33%;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);    
+}
+
+
+@media only screen and (max-width: 992px) {
+    .address {
+        font-size: 2.8vw;
+    }
+    .burned {
+        font-size: 5vw;
+    }
+    .swapinfo {
+        border: 0.3vw solid white;
+    }
+    .swaps > h2 {
+        font-size: 2.6vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .address {
+        font-size: 28px;
+    }
+    .burned {
+        font-size: 48px;
+    }    
+    .swaps > h2 {
+        font-size: 24px;
+    }
+    .swapinfo {
+        border: 5px solid white;   
+    }
+}
