@@ -43,7 +43,6 @@ const JoinJuryPage = () => {
             const lockingTime = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'userLockingTime', args: [address]});
             const duration = await readContract({ address: StakingAddress, abi: StakingAbi, functionName: 'lockingTime'});
             const rewardPerYear = Number(totalInfo[1]) * 60 * 60 * 24 * 365;
-            console.log(totalInfo);
             const APY = ((rewardPerYear / (Number(totalInfo[0])))) * 100;
             setApy(APY ? APY : 0.0);
             setTvl(Number(totalInfo[0]) / Math.pow(10, 18));
@@ -57,8 +56,7 @@ const JoinJuryPage = () => {
             // setLockingDuration(duration);
             const lockTime = Number(lockingTime);
             const dura = Number(duration);         
-            let d = new Date((lockTime + dura) * 1000);
-            console.log(lockTime, dura, d);            
+            let d = new Date((lockTime + dura) * 1000);           
             setLockTime(lockTime);
             setDisableUnlockingTime(d);
             d = new Date((lockTime + dura + 86400) * 1000);
@@ -125,7 +123,9 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
-            if(Number(tokenBalance) <= 0)throw "You have no tokens now";
+            if(Number(tokenAmounts) === 0)throw "Please enter your Test Token Amount now!";
+            if(Number(tokenBalance) === 0)throw "You have no tokens now";
+            setError("");
             setConfirming(true);
           let TokenAmounts;
           if (Number(maxSet) === 0) {
@@ -229,14 +229,14 @@ const JoinJuryPage = () => {
                             />
                             <p onClick={() => setMaxAmount()} className="MaxButton">Max</p>
                         </section>  
-                    </div>
+                    </div>                   
                        {(Number(tokenAmount) > Number(allowance) & Number(tokenBalance) !== 0) ?
                         <section className="LockBox">
                             {confirming === false ?
                                 <>
                                     <p className='Text1'>Please approve Test Token first</p>
                                     <button disabled={confirming === false ? false : true} onClick={() => onTokenAllowance()} className="LockButton">
-                                    <p>Allow</p>
+                                    Approve Staking
                                     </button>
                                 </>
                               :
@@ -253,21 +253,24 @@ const JoinJuryPage = () => {
                         </section>    
                         :       
                         <>
+                        <section>
+                        {err?<p className="Text1" style={{textAlign:'center'}}>{err}</p>:<></>}                        
+                        </section>                        
                         <section className="claimBox">
                           {confirming === false ?
                             <>
-                              <button onClick={() => onTokenStake(tokenAmount)} className="LockButton">Stake $BEAN</button>
-                              {Number(userPendingRewards) > 0 ?
-                                <button disabled={false} onClick={onTokenClaim} className="LockButton">Claim $BEAN</button>
-                                :
-                                <></>
-                              }
-                              {Number(userAmount) > 0 ?
-                                <button disabled={lockingEnabled === true ? false : true} onClick={() => onTokenWithdraw()} className="LockButton">Withdraw $BEAN</button>
-                                :
-                                <>
-                                </>
-                              } 
+                                <button onClick={() => onTokenStake(tokenAmount)} className="LockButton">Stake $BEAN</button>
+                                {Number(userPendingRewards) > 0 ?
+                                  <button disabled={false} onClick={onTokenClaim} className="LockButton">Claim $BEAN</button>
+                                  :
+                                  <></>
+                                }
+                                {Number(userAmount) > 0 ?
+                                  <button disabled={lockingEnabled === true ? false : true} onClick={() => onTokenWithdraw()} className="LockButton">Withdraw $BEAN</button>
+                                  :
+                                  <>
+                                  </>
+                                } 
                             </>:
                             <ClipLoader
                             color={'#36d7b7'}
@@ -278,9 +281,6 @@ const JoinJuryPage = () => {
                             />                            
                           }
                         </section>    
-                        <section>
-                            {err?<p className="Text1">{err}</p>:<></>}
-                        </section>
                         </>            
                     }
                 </div>
