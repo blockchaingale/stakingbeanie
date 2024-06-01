@@ -123,9 +123,9 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
-            // if(Number(tokenAmounts) === 0)throw "Please enter your Test Token Amount now!";
-            // if(Number(tokenBalance) === 0)throw "You have no tokens now";
-            // setError("");
+            if(Number(tokenAmounts) <= 0)throw "Please enter your Test Token Amount now!";
+            if(Number(tokenBalance) === 0)throw "You have no tokens now";
+            setError("");
             setConfirming(true);
           let TokenAmounts;
           if (Number(maxSet) === 0) {
