@@ -31,7 +31,7 @@ const JoinJuryPage = () => {
     const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0xa2533C00c69B1B9A2d6E015793647b8B0b9377ac";
+    const StakingAddress = "0x5CC20c4A19e22377cD0ff1204D3C323971e15714";
     const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";    
     
     useEffect(() => {
@@ -123,9 +123,9 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
-            if(Number(tokenAmounts) === 0)throw "Please enter your Test Token Amount now!";
-            if(Number(tokenBalance) === 0)throw "You have no tokens now";
-            setError("");
+            // if(Number(tokenAmounts) === 0)throw "Please enter your Test Token Amount now!";
+            // if(Number(tokenBalance) === 0)throw "You have no tokens now";
+            // setError("");
             setConfirming(true);
           let TokenAmounts;
           if (Number(maxSet) === 0) {
