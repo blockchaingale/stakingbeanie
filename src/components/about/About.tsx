@@ -15,11 +15,11 @@ const About: React.FC<{}> = () => {
                     <span>
                         <br/>
                         <a href="https://t.me/BasedBeanie"><img src="./assets/image/telegram.png" alt="telegram" className={style.icon}/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://t.me/BasedBeanie"><img src="./assets/image/twitter.png" alt="twitters" className={style.icon}/></a>
+                        <a href="https://x.com/basebeanie?t=2hr9F5pVCVzAO-9p1CMonQ&s=09"><img src="./assets/image/twitter.png" alt="twitters" className={style.icon}/></a>
                     </span>
                 </div>
             </div>
-            <h2 className={style.network}>The digital advocate of the BASE network</h2>
+            <h2 className={style.network}>The Blue suited advocate of the BASE chain</h2>
             <br/>
             <hr style={{color: 'white'}}/>
             <br/>
