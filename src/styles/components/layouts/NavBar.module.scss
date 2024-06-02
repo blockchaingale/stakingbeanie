@@ -104,7 +104,7 @@
     transform: rotate(-405deg);
   }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .menu_button_container {
         display: flex;
     } 
@@ -149,7 +149,12 @@
 }                     
 
 @media screen and (max-width: 768px) {
-
+    .flex_rightf {
+        display: block;
+    }
+    .flex_right {
+        display: none;
+    }
     .beanie {
         font-size: 4vw;
     }    
