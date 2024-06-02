@@ -12,6 +12,7 @@ $color: #269ff6;
     align-items: center;
     padding: 50px 20px;
     margin: auto;
+
 }
 
 .flex_container > .description > h2 {
@@ -34,6 +35,7 @@ $color: #269ff6;
   }
   .flex_container {
       flex-direction: column;
+      text-align: center;
   }
   .joinbtn {
     padding: 100px;
