@@ -6,7 +6,7 @@ const TheJury: React.FC<{}> = () => {
         <div className={style.jury}>
             <div className={style.flex_container}>
                 <div>
-                    <img src="./assets/image/Beanie2.png" alt="" className="JuryImg"/>
+                    <img src="./assets/image/Beanie2.png" alt="" className={style.JuryImg}/>
                 </div>
                 <div className={style.description}>
                     <h2>beanie's pledge</h2>

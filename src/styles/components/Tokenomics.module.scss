@@ -70,3 +70,10 @@
         border: 5px solid white;   
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .JuryImg {
+       width: 60vw;
+       height: auto;
+    }
+}

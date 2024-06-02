@@ -27,16 +27,16 @@ $color: #269ff6;
   }    
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .JuryImg {
-     width: 100vw;
+     width: 80vw;
      height: auto;
   }
   .flex_container {
       flex-direction: column;
   }
   .joinbtn {
-
+    padding: 100px;
   };
 }
 
@@ -58,7 +58,7 @@ $color: #269ff6;
   }  
   .joinbtn {
     font-size: 1rem;
-  }  
+  }
 }
 
 .joinbtn {

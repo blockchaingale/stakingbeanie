@@ -27,7 +27,7 @@ const Tokenomics: React.FC<{}> = () => {
         <div className={style.tokenomics}>
             <div className={style.flex_container}>
                 <div><h1>TOKENOMICS</h1></div>
-                <div><img src="./assets/image/Beanie3.png" alt="" className="JuryImg"/></div>
+                <div><img src="./assets/image/Beanie3.png" alt="" className={style.JuryImg}/></div>
                 <div><h1 className={style.burned}>LP: BURNED 🔥</h1></div>
                 <div><h2 className={style.address}>{TokenAddress}</h2></div>
                 <div className={style.swapinfo}>
