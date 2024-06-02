@@ -54,6 +54,7 @@ const JoinJuryPage = () => {
             setMaxBalance(tokenAmount);
             // setUserLockingTime(lockingTime);
             // setLockingDuration(duration);
+            console.log(totalInfo);
             const lockTime = Number(lockingTime);
             const dura = Number(duration);         
             let d = new Date((lockTime + dura) * 1000);           
