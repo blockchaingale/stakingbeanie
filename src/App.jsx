@@ -84,7 +84,7 @@ const App = () => {
                 </div>
                 <Footer/>
               </Route>
-              <Route exact path="/JoinJury">
+              <Route exact path="/joinjury">
                 <JoinJury/>
               </Route>
             </div>

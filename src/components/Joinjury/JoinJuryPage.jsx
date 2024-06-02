@@ -32,7 +32,7 @@ const JoinJuryPage = () => {
     const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0xa2533C00c69B1B9A2d6E015793647b8B0b9377ac";
+    const StakingAddress = "0x6a4Ebc3a65856876342a681214e81e8943598848";
     const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";    
     
     useEffect(() => {
@@ -55,6 +55,7 @@ const JoinJuryPage = () => {
             setMaxBalance(tokenAmount);
             // setUserLockingTime(lockingTime);
             // setLockingDuration(duration);
+            console.log(totalInfo);
             const lockTime = Number(lockingTime);
             const dura = Number(duration);         
             let d = new Date((lockTime + dura) * 1000);           
@@ -124,8 +125,8 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
-            if(Number(tokenAmounts) === 0)throw "Please enter your Test Token Amount now!";
-            if(Number(tokenBalance) === 0)throw "You have no tokens now";
+            if(Number(tokenAmounts) <= 0)throw "Please enter your Test Token Amount now!";
+            if(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) === 0)throw "You have no tokens now";
             setError("");
             setConfirming(true);
           let TokenAmounts;
@@ -231,7 +232,7 @@ const JoinJuryPage = () => {
                             <p onClick={() => setMaxAmount()} className="MaxButton">Max</p>
                         </section>  
                     </div>                   
-                       {(Number(tokenAmount) > Number(allowance) & Number(tokenBalance) !== 0) ?
+                       {(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) !== 0) ?
                         <section className="LockBox">
                             {confirming === false ?
                                 <>
