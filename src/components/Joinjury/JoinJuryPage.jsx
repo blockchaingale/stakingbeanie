@@ -31,7 +31,7 @@ const JoinJuryPage = () => {
     const [userenableunlockingTime, setEnableUnlockingTime] = useState(new Date());
     let [confirming, setConfirming] = useState(false);
 
-    const StakingAddress = "0x5CC20c4A19e22377cD0ff1204D3C323971e15714";
+    const StakingAddress = "0x6a4Ebc3a65856876342a681214e81e8943598848";
     const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";    
     
     useEffect(() => {
