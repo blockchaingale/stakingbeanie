@@ -1,9 +1,6 @@
 .network {
     font-stretch: ultra-expanded;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24.2px;
-    letter-spacing: 10px;
     text-align: center;
 }
 
@@ -56,6 +53,10 @@
     .flex_container {
         flex-direction: column;
     }
+    .network {
+        font-size: 3vw;
+        letter-spacing: 1vw;
+    }    
 }
 
 @media screen and (min-width: 768px) {
@@ -76,4 +77,9 @@
         font-size: 20px;
         line-height: 24.2px;
     }   
+    .network {
+        font-size: 20px;
+        line-height: 24.2px;
+        letter-spacing: 10px;
+    }
 }
