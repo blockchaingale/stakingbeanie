@@ -110,7 +110,7 @@
     } 
     .nav {
         position: absolute;
-        top: 0;
+        top: 10px;
         margin-top: 50px;
         left: 0;
         flex-direction: column;
@@ -138,7 +138,7 @@
         padding: 0.5em 0;
         width: 100%;
         color: white;
-        background-color: #222;
+        background-color: rgba(38, 159, 246, 0.35);
       }
     .flex_rightf {
         display: block;
@@ -156,7 +156,7 @@
         display: none;
     }
     .beanie {
-        font-size: 4vw;
+        font-size: 8vw;
     }    
     .buybtn {
         font-size: 12px;
