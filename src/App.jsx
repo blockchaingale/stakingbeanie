@@ -18,7 +18,7 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from "@web3modal/react";
 
-const projectId = '7c7fff7dcdf68099b497f697a163e920'
+const projectId = '9dd8a1f80d3099bbdc29bebd194b03e7'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [mainnet, sepolia, bscTestnet],
@@ -39,7 +39,7 @@ const config = createConfig({
     new WalletConnectConnector({
       chains,
       options: {
-        projectId: '7c7fff7dcdf68099b497f697a163e920',
+        projectId: '9dd8a1f80d3099bbdc29bebd194b03e7',
       },
     }),
     new InjectedConnector({
@@ -91,7 +91,7 @@ const App = () => {
           </Switch>
         </WagmiConfig>
         <Web3Modal
-          projectId="7c7fff7dcdf68099b497f697a163e920"
+          projectId="9dd8a1f80d3099bbdc29bebd194b03e7"
           ethereumClient={ethereumClient}
         />
       </div>

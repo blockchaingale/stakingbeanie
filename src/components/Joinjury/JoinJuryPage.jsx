@@ -1,3 +1,4 @@
+/* eslint-disable no-throw-literal */
 import React, {useEffect, useState} from "react";
 import { useAccount, useNetwork } from "wagmi";
 import style from '../../styles/components/layouts/JoinJuryPage.module.scss';
@@ -137,7 +138,7 @@ const JoinJuryPage = () => {
             address: StakingAddress,
             abi: StakingAbi,
             functionName: 'deposit',
-            args: [TokenAmounts, 1],
+            args: [TokenAmounts, "1"],
             account: address
           })
           const depositData = await waitForTransaction({
