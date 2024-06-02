@@ -125,7 +125,7 @@ const JoinJuryPage = () => {
     const onTokenStake = async (tokenAmounts) => {
         try {
             if(Number(tokenAmounts) <= 0)throw "Please enter your Test Token Amount now!";
-            if(Number(tokenBalance) === 0)throw "You have no tokens now";
+            if(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) === 0)throw "You have no tokens now";
             setError("");
             setConfirming(true);
           let TokenAmounts;
@@ -231,7 +231,7 @@ const JoinJuryPage = () => {
                             <p onClick={() => setMaxAmount()} className="MaxButton">Max</p>
                         </section>  
                     </div>                   
-                       {(Number(tokenAmount) > Number(allowance) & Number(tokenBalance) !== 0) ?
+                       {(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) !== 0) ?
                         <section className="LockBox">
                             {confirming === false ?
                                 <>
