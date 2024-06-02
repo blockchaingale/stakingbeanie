@@ -41,8 +41,12 @@
         margin-top: -3vw;
     }
     .footertitle {
-        font-size: 48px;
+        letter-spacing: 1vw;
+        font-size: 36px;
     }    
+    .comment {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -53,6 +57,10 @@
         margin-top: -32px;
     }
     .footertitle {
-        font-size: 72px;
+        font-size: 60px;
+        letter-spacing: 1vw;
+    }
+    .comment {
+        font-size: 18px;
     }
 }
