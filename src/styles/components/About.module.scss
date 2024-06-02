@@ -28,7 +28,7 @@
 
 
 @media screen and (max-width: 768px) {
-    img {
+    .icon {
         width: 8vw;
     }
     .description > h1 {
@@ -48,8 +48,18 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .JuryImg {
+       width: 100vw;
+       height: auto;
+    }
+    .flex_container {
+        flex-direction: column;
+    }
+}
+
 @media screen and (min-width: 768px) {
-    img {
+    .icon {
         width: auto;
     }
     .description > h1 {
