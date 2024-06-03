@@ -32,7 +32,7 @@ const Tokenomics: React.FC<{}> = () => {
                 {/* <div><h2 className={style.address}>{TokenAddress}</h2></div> */}
                 <div className={style.swapinfo}>
                     <div className={style.swaps}><h2>BUY TAX<br/>{'0%'}</h2></div>
-                    <div className={style.swaps}><h2>SUPPLY<br/>{totalSupply}</h2></div>
+                    <div className={style.swaps}><h2>SUPPLY<br/>{"1,000,000,000"}</h2></div>
                     <div className={style.swaps}><h2>SELL TAX<br/>{"0%"}</h2></div>
                 </div>
             </div>            
