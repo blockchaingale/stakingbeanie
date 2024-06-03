@@ -12,7 +12,8 @@ const Drop: React.FC<{}> = () => {
             </div> 
             <div className={style.drop}>
                 <div className={style.flex_container}>      
-                    <a href="https://flappycreator.com/share.php?id=665df5272a85b"><img alt="birdgame" src="./assets/image/game.jpg" width="100%"/></a>
+                    <iframe src="https://flappycreator.com/share.php?id=665df5272a85b" name="birdgame" style={{width: "60vw", height: "40vw"}}></iframe>
+                    {/* <a href="https://flappycreator.com/share.php?id=665df5272a85b"><img alt="birdgame" src="./assets/image/game.jpg" width="100%"/></a> */}
                     {/* <div className={style.imagepose}></div> */}
                     {/* <div className={style.otherpose}></div> */}
                 </div>
