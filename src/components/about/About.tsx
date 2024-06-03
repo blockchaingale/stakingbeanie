@@ -6,7 +6,7 @@ const About: React.FC<{}> = () => {
         <div className={style.about}>
             <div className={style.flex_container}>
                 <div>
-                    <img src="./assets/image/Beanie1.png" alt="" className={style.JuryImg}/>
+                    <img src="./assets/image/sImg1.gif" alt="first Gif" className={style.JuryImg}/>
                 </div>
                 <div className={style.description}>
                     <h4>Introducing</h4>
