@@ -51,25 +51,28 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .swapinfo {
+        margin: 0px -5vw;
+    }
     .address {
         font-size: 2.8vw;
-    }
-    .burned {
-        font-size: 6vw;
     }
     .swapinfo {
         border: 0.3vw solid white;
     }
     .swaps > h2 {
-        font-size: 2.6vw;
+        font-size: 2.5vw;
     }
 
     .flex_container > div > h1 {
-        font-size: 6vw;
-    }
+        font-size: 5.5vw;
+    }   
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) { 
+    .swapinfo {
+        margin: 0;
+    }    
     .address {
         font-size: 28px;
     }
