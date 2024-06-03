@@ -26,13 +26,13 @@ const Tokenomics: React.FC<{}> = () => {
     return (
         <div className={style.tokenomics}>
             <div className={style.flex_container}>
-                <div><h1>TOKENOMICS</h1></div>
-                <div><img src="./assets/image/Beanie3.png" alt="" className={style.JuryImg}/></div>
-                <div><h1 className={style.burned}>LP: BURNED 🔥</h1></div>
+                <div className={style.others}><h1>TOKENOMICS</h1></div>
+                <div className={style.others}><img src="./assets/image/Beanie3.png" alt="" className={style.JuryImg}/></div>
+                <div className={style.others}><h1 className={style.burned}>LP: BURNED 🔥</h1></div>
                 {/* <div><h2 className={style.address}>{TokenAddress}</h2></div> */}
                 <div className={style.swapinfo}>
                     <div className={style.swaps}><h2>BUY TAX<br/>{'0%'}</h2></div>
-                    <div className={style.swaps}><h2>SUPPLY {tokenAmount}</h2></div>
+                    <div className={style.swaps}><h2>SUPPLY<br/>{tokenAmount}</h2></div>
                     <div className={style.swaps}><h2>SELL TAX<br/>{"0%"}</h2></div>
                 </div>
             </div>            
