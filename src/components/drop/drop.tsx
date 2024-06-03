@@ -12,8 +12,9 @@ const Drop: React.FC<{}> = () => {
             </div> 
             <div className={style.drop}>
                 <div className={style.flex_container}>      
-                    <div className={style.imagepose}></div>
-                    <div className={style.otherpose}></div>
+                    <a href="https://flappycreator.com/share.php?id=665df5272a85b"><img alt="birdgame" src="./assets/image/game.jpg" width="100%"/></a>
+                    {/* <div className={style.imagepose}></div> */}
+                    {/* <div className={style.otherpose}></div> */}
                 </div>
             </div>
         </div>

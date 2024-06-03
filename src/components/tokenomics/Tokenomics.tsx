@@ -13,7 +13,6 @@ const Tokenomics: React.FC<{}> = () => {
         const FetchStakingData = async () => {
           try {
             const tokenBalance = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'totalSupply', args: [] });
-            console.log(tokenBalance);
             setTotalSupply(Number(tokenBalance) / Math.pow(10, 18));
           } catch (e) {
             console.error(e)
