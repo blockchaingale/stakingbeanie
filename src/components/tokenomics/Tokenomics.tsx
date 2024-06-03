@@ -7,14 +7,14 @@ import TokenAbi from '../../config/TokenAbi.json'
 
 const Tokenomics: React.FC<{}> = () => {
     const TokenAddress = "0xCa9a874173fd562d4287A33a9455836885869e41";     
-    const [tokenAmount, setTokenAmount] = useState(0);
+    const [totalSupply, setTotalSupply] = useState(0);
     const { address, isConnected } = useAccount();
     const { chain } = useNetwork();    
     useEffect(() => {
         const FetchStakingData = async () => {
           try {
-            const tokenBalance = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'balanceOf', args: [address] });
-            setTokenAmount(Number(tokenBalance) / Math.pow(10, 18));
+            const tokenBalance = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'totalSupply', args: [] });
+            setTotalSupply(Number(tokenBalance) / Math.pow(10, 18));
           } catch (e) {
             console.error(e)
           }
@@ -32,7 +32,7 @@ const Tokenomics: React.FC<{}> = () => {
                 {/* <div><h2 className={style.address}>{TokenAddress}</h2></div> */}
                 <div className={style.swapinfo}>
                     <div className={style.swaps}><h2>BUY TAX<br/>{'0%'}</h2></div>
-                    <div className={style.swaps}><h2>SUPPLY<br/>{tokenAmount}</h2></div>
+                    <div className={style.swaps}><h2>SUPPLY<br/>{totalSupply}</h2></div>
                     <div className={style.swaps}><h2>SELL TAX<br/>{"0%"}</h2></div>
                 </div>
             </div>            
