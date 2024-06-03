@@ -1,7 +1,11 @@
 .App {
-    background-color: #d9d9d9;
+//    background-color: #d9d9d9;
     width: 100%;
     margin: auto;
+    background-image: url('../public/assets/image/background_d.jpg');
+    opacity: .7;
+    background-position-x: center;
+    background-position-y: top;
 }
 
 body {

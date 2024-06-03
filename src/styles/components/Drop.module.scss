@@ -16,7 +16,7 @@
 
 .flex_container > h1 {
     display: block;
-    background-color: #d9d9d9;
+    background-color: #d9d9d900;
 }
 
 .flex_container > div {
@@ -41,8 +41,6 @@
 }
 
 @media screen and (min-width: 500px) {
-
-    
     .otherpose {
         background-color: #d9d9d9;
         width: 385px;

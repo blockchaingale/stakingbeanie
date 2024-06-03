@@ -47,6 +47,12 @@
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    transition:0.3s ease-in-out;
+    -webkit-transition:0.3s ease-in-out;    
+}
+
+.linktext:hover  {
+  color:#1BBF61;
 }
 
 .buybtn:hover {
