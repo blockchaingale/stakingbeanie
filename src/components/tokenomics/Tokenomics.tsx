@@ -14,6 +14,7 @@ const Tokenomics: React.FC<{}> = () => {
         const FetchStakingData = async () => {
           try {
             const tokenBalance = await readContract({ address: TokenAddress, abi: TokenAbi, functionName: 'totalSupply', args: [] });
+            console.log(tokenBalance);
             setTotalSupply(Number(tokenBalance) / Math.pow(10, 18));
           } catch (e) {
             console.error(e)
@@ -32,7 +33,7 @@ const Tokenomics: React.FC<{}> = () => {
                 {/* <div><h2 className={style.address}>{TokenAddress}</h2></div> */}
                 <div className={style.swapinfo}>
                     <div className={style.swaps}><h2>BUY TAX<br/>{'0%'}</h2></div>
-                    <div className={style.swaps}><h2>SUPPLY<br/>{totalSupply}</h2></div>
+                    <div className={style.swaps}><h2>SUPPLY<br/>{1000000000}</h2></div>
                     <div className={style.swaps}><h2>SELL TAX<br/>{"0%"}</h2></div>
                 </div>
             </div>            
