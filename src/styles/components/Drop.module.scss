@@ -27,13 +27,26 @@
     .imagepose {
         background-color: #d9d9d9;
         width: 385px;
-        height: 357px;
-    }
+        height: 500px;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .imagepose {
+        background-color: #d9d9d9;
+        border-radius: 20px;
+        width: 80vw;
+        height: 120vw;
+    } 
+}
+
+@media screen and (min-width: 500px) {
+
     
     .otherpose {
         background-color: #d9d9d9;
         width: 385px;
-        height: 72px;
+        height: 220px;
     }    
     .flex_container > h1 {
         font-size: 32px;
@@ -50,11 +63,6 @@
         font-size: 5vw;
         padding: 2.5vw 5vw;
     }      
-    .imagepose {
-        background-color: #d9d9d9;
-        width: 60vw;
-        height: 60vw;
-    }
     
     .otherpose {
         background-color: #d9d9d9;
