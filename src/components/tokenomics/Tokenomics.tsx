@@ -31,9 +31,9 @@ const Tokenomics: React.FC<{}> = () => {
                 <div><h1 className={style.burned}>LP: BURNED 🔥</h1></div>
                 {/* <div><h2 className={style.address}>{TokenAddress}</h2></div> */}
                 <div className={style.swapinfo}>
-                    <div className={style.swaps}><h2>BUY TAX {'0%'}</h2></div>
+                    <div className={style.swaps}><h2>BUY TAX<br/>{'0%'}</h2></div>
                     <div className={style.swaps}><h2>SUPPLY {tokenAmount}</h2></div>
-                    <div className={style.swaps}><h2>SELL TAX {"0%"}</h2></div>
+                    <div className={style.swaps}><h2>SELL TAX<br/>{"0%"}</h2></div>
                 </div>
             </div>            
         </div>
