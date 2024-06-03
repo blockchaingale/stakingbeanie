@@ -5,8 +5,10 @@ const Footer: React.FC<{}> = () => {
     return (
         <div>     
             <div>
-                <div className={style.flex_container}>            
-                    <h1 className={style.footername}>#DOITFORTHEBEAN</h1>   
+                <div className={style.flex_container1}>         
+                    <div><hr/></div>   
+                    <div><h1 className={style.footername}>#DOITFORTHEBEAN</h1></div>
+                    <div><hr/></div>   
                 </div>   
                 <div className={style.line}></div>                
             </div> 

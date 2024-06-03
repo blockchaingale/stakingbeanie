@@ -5,8 +5,12 @@ const Drop: React.FC<{}> = () => {
     return (
         <div className={style.dropcontent}>     
             <div>
-                <div className={style.flex_container}>            
-                    <h1>BEANIE DROP</h1>   
+                <div className={style.flex_container}>           
+                    <div><hr/></div>
+                    <div>
+                        <h1>BEANIE DROP</h1>   
+                    </div> 
+                    <div><hr/></div>
                 </div>   
                 <div className={style.line}></div>                
             </div> 

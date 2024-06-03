@@ -11,13 +11,16 @@
     justify-content: center;
     align-items: center;  
 }
-
-.line {
-    border-top: 1px solid white;
+.flex_container1 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;  
 }
-
-.flex_container > div {
+.flex_container1 > div {
     margin-bottom: 20px;
+    flex: 33%;
 }
 
 .flex_container > div > img {
