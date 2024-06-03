@@ -21,7 +21,6 @@ const Tokenomics: React.FC<{}> = () => {
         if (isConnected === true && chain?.id === 11155111 && address) {
           FetchStakingData();
         }
-        if(totalSupply === 0) setTotalSupply(1000000000);
       }, [isConnected, address, chain])    
     return (
         <div className={style.tokenomics}>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./App.module.scss";
-import Header from "./components/layouts/Header.tsx";
+import Header from "./container/Header.tsx";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import About from "./components/about/About.tsx";
 import TheJury from "./components/thejury/TheJury.tsx";

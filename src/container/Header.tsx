@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../../styles/components/layouts/NavBar.module.scss";
+import style from "../styles/components/layouts/NavBar.module.scss";
 
 const Header: React.FC<{}> = () => {
 
