@@ -37,6 +37,14 @@
     padding: 10px 30px;
 }
 
+.footertitle, .comment {
+    text-shadow:
+    -2px -2px 0 #3396FF,  
+     2px -2px 0 #3396FF,
+     -2px 2px 0 #3396FF,
+      2px 2px 0 #3396FF;       
+}
+
 @media screen and (max-width: 992px) {
     .footername {
         font-size: 6vw;
