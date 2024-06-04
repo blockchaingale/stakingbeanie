@@ -1,5 +1,7 @@
 .headercontent {
-    padding-top: 30px;
+    background-color: #3396FFbb;
+    border-radius: 0px 0px 20px 20px;
+    padding: 30px;
 }
 
 .nav {
@@ -116,7 +118,7 @@
     } 
     .nav {
         position: absolute;
-        top: 20px;
+        top: 5vw;
         margin-top: 50px;
         left: 0;
         flex-direction: column;
@@ -144,7 +146,7 @@
         padding: 0.5em 0;
         width: 100%;
         color: white;
-        background-color: rgba(38, 159, 246, 0.35);
+        background-color: rgba(38, 159, 246, 0.8);
       }
     .flex_rightf {
         display: block;
@@ -178,7 +180,7 @@
     }
 }
 
-@media screen and (max-width: 800px) and (min-width: 768px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
     .flex_rightf {
       display: none;
   }
@@ -186,16 +188,16 @@
       display: block;
   }    
   .buybtn {
-      font-size: 16px;
+      font-size: 15px;
       border-radius: 20px;    
-      padding: 10px 20px;        
+      padding: 9px 18px;        
   }  
   .linktext {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
     .linktext {
         width: 100px;
     }
@@ -216,7 +218,6 @@
     }    
     .buybtn {
         font-size: 20px;
-        line-height: 24.2px;
         border-radius: 30px;    
         padding: 15px 25px;        
     }
