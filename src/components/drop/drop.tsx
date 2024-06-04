@@ -7,7 +7,7 @@ const Drop: React.FC<{}> = () => {
             <div>
                 <div className={style.flex_container}>           
                     <div><hr/></div>
-                    <div><h1>BEANIE DROP</h1></div> 
+                    <div><h1 className={style.dropname}>BEANIEDROP</h1></div> 
                     <div><hr/></div>
                 </div>   
                 <div className={style.line}></div>                

@@ -14,17 +14,6 @@
     align-items: center;  
 }
 
-.flex_container > div > h1 {
-    text-align: center;
-    text-shadow: 0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2);    
-}
-
 .flex_container > div > hr {
     box-shadow: 0 1px 0 #ccc, 
     0 2px 0 #c9c9c9,
@@ -47,10 +36,16 @@
     }    
 }
 
-@media screen and (max-width: 992px) {
-    .flex_container > div > h1 {
-        font-size: 6vw;
-    } 
+.dropname {
+    text-align: center;
+    padding: 10px 30px;    
+    text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2);       
 }
 
 @media screen and (max-width: 500px) {
@@ -68,9 +63,9 @@
         width: 385px;
         height: 220px;
     }    
-    .flex_container > h1 {
+    .dropname {
         font-size: 32px;
-        padding: 10px 30px;
+
     }  
     .line {
         margin-top: -32px;
@@ -78,9 +73,8 @@
 }
 
 @media screen and (max-width: 500px) {
-    .flex_container > h1 {
-        font-size: 5vw;
-        padding: 2.5vw 5vw;
+    .dropname {
+        font-size: 6vw;
     }      
     
     .otherpose {
