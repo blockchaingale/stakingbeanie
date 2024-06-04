@@ -32,6 +32,12 @@
     fill: #3396FF;
 }
 
+.space {
+    text-transform: lowercase;
+    color: #3396FF;
+    padding-left: 4px;
+}
+
 @media screen and (max-width: 768px) {
     .icon {
         width: 12vw;

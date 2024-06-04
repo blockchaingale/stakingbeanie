@@ -10,7 +10,7 @@ const About: React.FC<{}> = () => {
                 </div>
                 <div className={style.description}>
                     <h4>Introducing</h4>
-                    <h1>$beanie</h1>
+                    <h1>$<span className={style.space}>l</span>beanie</h1>
                     <p>While some say do it for the meme,<br/> Beanie says do it for the $BEAN</p>
                     <span>
                         <br/>
