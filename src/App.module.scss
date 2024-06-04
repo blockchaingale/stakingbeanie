@@ -1,18 +1,11 @@
 @media screen and (max-width: 992px) {
-    .App:before {
-        width: 1000px;
-    }    
     .content {
         width: 90%;
         margin: auto;
     }    
 }
 
-@media screen and (min-width: 992px) {
-
-    .App:before {
-        width: 100%;
-    }    
+@media screen and (min-width: 992px) {   
     .content {
         width: 80%;
         margin: auto;
@@ -23,19 +16,3 @@ hr {
     display: block;
     border-top: 1px solid white;
 }
-
-.App:before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    z-index: -10;
-    background: url('../public/assets/image/background_a.jpg') no-repeat center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    opacity: .7;
-  }
