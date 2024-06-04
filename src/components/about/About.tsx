@@ -25,7 +25,7 @@ const About: React.FC<{}> = () => {
             </div>
             <h2 className={style.network}>The Blue suited advocate of the BASE chain</h2>
             <br/>
-            <hr style={{color: 'white', boxShadow: "2px 2px 0px rgba(0, 0, 0, 1), 5px 4px 0px rgba(0, 0, 0, 0.15)"}}/>
+            <hr style={{color: 'white', boxShadow: "rgba(0, 0, 0, 0.8) 3px 4px 4px"}}/>
             <br/>
             <br/>
         </div>
