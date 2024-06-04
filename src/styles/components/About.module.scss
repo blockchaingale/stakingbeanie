@@ -27,11 +27,19 @@
     }
 }
 
+.icon {
+   width: 64px;
+   padding: 10px;
+}
 
+.icon:hover path {
+    fill: #3396FF;
+}
 
 @media screen and (max-width: 768px) {
     .icon {
-        width: 8vw;
+        width: 12vw;
+        padding: 1vw;
     }
     .description > h1 {
         font-size: 15vw;
@@ -86,9 +94,6 @@
         width: 80%;
         height: auto;
      }    
-    .icon {
-        width: auto;
-    }
     .description > h1 {
         fill: none;
         font-size: 70px;

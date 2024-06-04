@@ -17,6 +17,7 @@ import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from "@web3modal/react";
+import "./styles/icon.css";
 
 const projectId = '9dd8a1f80d3099bbdc29bebd194b03e7'
 

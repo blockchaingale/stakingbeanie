@@ -3,7 +3,7 @@
     width: 100%;
     margin: auto;
     background: #ff0000 url('../public/assets/image/background_a.jpg') top center fixed;
-    background-size: cover;
+
     opacity: .7;
 }
 
@@ -11,7 +11,9 @@
 }
 
 @media screen and (min-width: 768px) {
-
+    .App {
+        background-size: cover;
+    }
 }
 
 body {

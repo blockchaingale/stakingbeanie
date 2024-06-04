@@ -28,6 +28,15 @@
     height: 68px;
 }
 
+.icon {
+    width: 64px;
+    padding: 10px;
+ }
+ 
+ .icon:hover path {
+    fill: #3396FF;
+ }
+
 .footername {
     text-shadow:
     -2px -2px 0 #3396FF,  
@@ -45,7 +54,15 @@
       2px 2px 0 #3396FF;       
 }
 
+@media screen and (max-width: 768px) {
+    .icon {
+        width: 12vw;
+        padding: 1vw;
+    }      
+}
+
 @media screen and (max-width: 992px) {
+  
     .footername {
         font-size: 6vw;
     }     
