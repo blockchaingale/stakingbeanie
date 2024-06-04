@@ -1,9 +1,11 @@
 .App {
     margin: auto;
-    background-position: center;
+    background-position-y: top;
+    background-position-x: center;
     background-image: url('../public/assets/image/background_a.jpg');
     background-repeat: no-repeat; 
-    background-attachment: fixed;       
+    background-attachment: fixed;
+    background-size: auto 100vh;
     opacity: .7;    
 }
 
