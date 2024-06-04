@@ -16,11 +16,13 @@
 
 .flex_container > div > h1 {
     text-align: center;
-    text-shadow:
-    -2px -2px 0 #3396FF,  
-     2px -2px 0 #3396FF,
-     -2px 2px 0 #3396FF,
-      2px 2px 0 #3396FF;          
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);         
+}
+
+.flex_container > div > hr {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15); 
 }
 
 .flex_container > div {

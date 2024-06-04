@@ -2,11 +2,8 @@
     font-stretch: ultra-expanded;
     font-weight: 700;
     text-align: center;
-    text-shadow:
-    -1px -1px 0 #3396FF,  
-     1px -1px 0 #3396FF,
-     -1px 1px 0 #3396FF,
-      1px 1px 0 #3396FF;    
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);     
 }
 
 .about {
@@ -56,20 +53,14 @@
     }
     
     .description > h4 {
-        text-shadow:
-        -1px -1px 0 #3396FF,  
-         1px -1px 0 #3396FF,
-         -1px 1px 0 #3396FF,
-          1px 1px 0 #3396FF;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);       
         font-size: 6vw;
     }
     
     .description > p {
-        text-shadow:
-        -1px -1px 0 #3396FF,  
-         1px -1px 0 #3396FF,
-         -1px 1px 0 #3396FF,
-          1px 1px 0 #3396FF;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);   
         font-size: 4.5vw;
     }      
 }
@@ -110,21 +101,15 @@
     }
     
     .description > h4 {
-        text-shadow:
-        -1px -1px 0 #3396FF,  
-         1px -1px 0 #3396FF,
-         -1px 1px 0 #3396FF,
-          1px 1px 0 #3396FF;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);       
         font-size: 20px;
         line-height: 24.2px;
     }
     
     .description > p {
-        text-shadow:
-        -1px -1px 0 #3396FF,  
-         1px -1px 0 #3396FF,
-         -1px 1px 0 #3396FF,
-          1px 1px 0 #3396FF;        
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);       
         font-size: 20px;
         line-height: 24.2px;
     }   

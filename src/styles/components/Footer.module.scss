@@ -23,6 +23,11 @@
     flex: 33%;
 }
 
+.flex_container1 > div > hr {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15); 
+}
+
 .flex_container > div > img {
     width: 79px;
     height: 68px;
@@ -38,20 +43,14 @@
  }
 
 .footername {
-    text-shadow:
-    -2px -2px 0 #3396FF,  
-     2px -2px 0 #3396FF,
-     -2px 2px 0 #3396FF,
-      2px 2px 0 #3396FF;       
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);        
     padding: 10px 30px;
 }
 
 .footertitle, .comment {
-    text-shadow:
-    -2px -2px 0 #3396FF,  
-     2px -2px 0 #3396FF,
-     -2px 2px 0 #3396FF,
-      2px 2px 0 #3396FF;       
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
+        5px 4px 0px rgba(0, 0, 0, 0.15);      
 }
 
 @media screen and (max-width: 768px) {
