@@ -165,7 +165,7 @@ export const initWeb3Onboard = init({
         // }
     ],
     appMetadata: {
-        name: 'MainStreem Staking',
+        name: 'Staking',
         icon: blocknativeIcon,
         logo: blocknativeLogo,
         description: 'Ecosystem',
