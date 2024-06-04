@@ -46,16 +46,20 @@
 }
 
 .burned {
-    padding: 30px 0px;
+    padding-top: 30px;
 }
 
-.others {
+.others > h1 {
     padding-bottom: 30px;
+}
+
+.others .burned {
+    padding-bottom: 0px;
 }
 
 @media only screen and (max-width: 992px) {
     .swapinfo {
-        margin: 0px -5vw;
+        margin: 0px -8vw;
     }
     .address {
         font-size: 2.8vw;
