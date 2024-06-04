@@ -25,19 +25,21 @@
 
 .flex_container > div > img {
     width: 79px;
-    height: 68px;;
+    height: 68px;
 }
 
 .footername {
-    letter-spacing: 10px;
+    text-shadow:
+    -1px -1px 0 #3396FF,  
+     1px -1px 0 #3396FF,
+     -1px 1px 0 #3396FF,
+      1px 1px 0 #3396FF;       
     padding: 10px 30px;
 }
 
-
-
 @media screen and (max-width: 992px) {
     .footername {
-        font-size: 3vw;
+        font-size: 6vw;
     }     
     .line {
         margin-top: -3vw;
@@ -54,6 +56,7 @@
 @media screen and (min-width: 992px) {
     .footername {
         font-size: 32px;
+        letter-spacing: 10px;        
     }  
     .line {
         margin-top: -32px;

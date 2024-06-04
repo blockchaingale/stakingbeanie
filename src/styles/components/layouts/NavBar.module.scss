@@ -163,6 +163,12 @@
     }
     .beanie {
         font-size: 8vw;
+        text-shadow:
+        3px 3px 0 #3396FF,
+      -1px -1px 0 #3396FF,  
+       1px -1px 0 #3396FF,
+       -1px 1px 0 #3396FF,
+        1px 1px 0 #3396FF;         
     }    
     .buybtn {
         font-size: 12px;
@@ -200,8 +206,13 @@
         display: block;
     }
     .beanie {
-        font-size: 32px;
-        line-height: 38.73px;
+        font-size: 48px;
+        text-shadow:
+        3px 3px 0 #3396FF,
+      -1px -1px 0 #3396FF,  
+       1px -1px 0 #3396FF,
+       -1px 1px 0 #3396FF,
+        1px 1px 0 #3396FF;        
     }    
     .buybtn {
         font-size: 20px;

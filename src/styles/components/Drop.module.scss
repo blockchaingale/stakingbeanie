@@ -1,5 +1,5 @@
 .drop {
-    background-color: rgba(38, 159, 246, .35);
+    background-color: rgba(38, 159, 246, .8);
     border-radius: 10px;
     margin: auto;
     margin-top: 40px;
@@ -14,13 +14,24 @@
     align-items: center;  
 }
 
-.flex_container > div > h1 {
-    display: block;
-    background-color: #d9d9d900;
-    text-align: center;
+.flex_container1 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;  
 }
 
-.flex_container > div {
+.flex_container1 > div > h1 {
+    text-align: center;   
+    text-shadow:
+    -1px -1px 0 #3396FF,  
+     1px -1px 0 #3396FF,
+     -1px 1px 0 #3396FF,
+      1px 1px 0 #3396FF;    
+}
+
+.flex_container1 > div {
     margin-bottom: 20px;
     flex: 33%;
 }
@@ -31,12 +42,6 @@
         width: 385px;
         height: 500px;
     }    
-}
-
-@media screen and (max-width: 992px) {
-    .flex_container > div > h1 {
-        font-size: 4vw;
-    } 
 }
 
 @media screen and (max-width: 500px) {
@@ -54,9 +59,8 @@
         width: 385px;
         height: 220px;
     }    
-    .flex_container > h1 {
+    .flex_container1 > div > h1 {
         font-size: 32px;
-        padding: 10px 30px;
     }  
     .line {
         margin-top: -32px;
@@ -64,9 +68,8 @@
 }
 
 @media screen and (max-width: 500px) {
-    .flex_container > h1 {
+    .flex_container1 > div > h1 {
         font-size: 5vw;
-        padding: 2.5vw 5vw;
     }      
     
     .otherpose {
