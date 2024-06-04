@@ -22,7 +22,7 @@ const Header: React.FC<{}> = () => {
                   </label>              
                   <ul className={style.nav}>
                     <li className={style.item}><a className={style.linktext} href="#About">about</a></li>
-                    <li className={style.item}><a className={style.linktext} href="#TheJury">the jury</a></li>
+                    <li className={style.item}><a className={style.linktext} href="#TheJury">Stake</a></li>
                     <li className={style.item}><a className={style.linktext} href="#Tokenomics">tokenomics</a></li>
                     <li className={style.item}><a className={style.linktext} href="#Drop">game</a></li>
                   </ul>           
