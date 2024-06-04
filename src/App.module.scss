@@ -1,17 +1,17 @@
 .App {
-//    background-color: #d9d9d9;
     margin: auto;
+    background-position: center;
     background-image: url('../public/assets/image/background_a.jpg');
     background-repeat: no-repeat; 
-    background-position: center;
     background-attachment: fixed;       
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height:100%;
-    width:100%;     
-    opacity: .7;
+    opacity: .7;    
+}
+
+@media screen and (min-width: 768px) {
+    .App {
+            background-image: url('../public/assets/image/background_a.jpg');
+            background-size: cover;    
+        }
 }
 
 body {
