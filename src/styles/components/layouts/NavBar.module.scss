@@ -112,7 +112,7 @@
     transform: rotate(-405deg);
   }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .menu_button_container {
         display: flex;
     } 
@@ -156,7 +156,7 @@
     }      
 }                     
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .flex_rightf {
         display: block;
     }
@@ -180,7 +180,7 @@
     }
 }
 
-@media screen and (max-width: 992px) and (min-width: 768px) {
+@media screen and (max-width: 1280px) and (min-width: 768px) {
     .flex_rightf {
       display: none;
   }
@@ -193,13 +193,13 @@
       padding: 9px 18px;        
   }  
   .linktext {
-    font-size: 12px;
+    font-size: 1.2vw;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1280px) {
     .linktext {
-        width: 100px;
+        width: 10vw;
     }
     .flex_rightf {
         display: none;
