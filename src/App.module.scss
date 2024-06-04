@@ -3,19 +3,16 @@
     width: 100%;
     margin: auto;
     background: #ff0000 url('../public/assets/image/background_a.jpg') top center fixed no-repeat;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%;     
     opacity: .7;
-}
-
-@media screen and (max-width: 768px) {
-    .App {
-        background-size:cover;
-    }    
-}
-
-@media screen and (min-width: 768px) {
-    .App {
-        background-size: cover;
-    }
 }
 
 body {
