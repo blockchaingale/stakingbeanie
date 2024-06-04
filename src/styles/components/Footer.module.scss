@@ -24,8 +24,7 @@
 }
 
 .flex_container1 > div > hr {
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
-        5px 4px 0px rgba(0, 0, 0, 0.15); 
+    box-shadow: rgba(0, 0, 0, 0.8) 3px 4px 4px;  
 }
 
 .flex_container > div > img {
@@ -43,14 +42,12 @@
  }
 
 .footername {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
-        5px 4px 0px rgba(0, 0, 0, 0.15);        
+    text-shadow: rgba(0, 0, 0, 0.8) 3px 4px 4px;        
     padding: 10px 30px;
 }
 
 .footertitle, .comment {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1),
-        5px 4px 0px rgba(0, 0, 0, 0.15);      
+    text-shadow: rgba(0, 0, 0, 0.8) 3px 4px 4px;       
 }
 
 @media screen and (max-width: 768px) {

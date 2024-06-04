@@ -65,7 +65,7 @@ const App = () => {
   return (
     <Router>
       <QueryParamProvider>
-      <div className={styles.App} style={{ height: 'auto'}}>
+      <div className={styles.App}>
         <WagmiConfig config={config}>
           <Switch>
             <div className={styles.content}>
