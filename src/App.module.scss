@@ -1,8 +1,7 @@
 .App {
 //    background-color: #d9d9d9;
-    width: 100%;
     margin: auto;
-    background: #ff0000 url('../public/assets/image/background_a.jpg') top center fixed no-repeat;
+    background-image: url('../public/assets/image/background_a.jpg');
     background-repeat: no-repeat; 
     background-position: center;
     background-attachment: fixed;       
