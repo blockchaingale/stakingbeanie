@@ -125,7 +125,7 @@ const JoinJuryPage = () => {
 
     const onTokenStake = async (tokenAmounts) => {
         try {
-            if(Number(tokenAmounts) <= 0)throw "Please enter your Test Token Amount now!";
+            if(Number(tokenAmounts) <= 0)throw "Please enter your BEAN Token Amount now!";
             if(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) === 0)throw "You have no tokens now";
             setError("");
             setConfirming(true);
@@ -200,12 +200,12 @@ const JoinJuryPage = () => {
                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>Your Staked Amount:</div>
                       <div className={style.stakingMiddle}></div>
-                      <div className={style.stakingRight}>{userAmount} Test</div>
+                      <div className={style.stakingRight}>{userAmount} BEAN</div>
                   </div>
                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>Pending Reward Amount:</div>
                       <div className={style.stakingMiddle}></div>
-                      <div className={style.stakingRight}>{userPendingRewards.toFixed(5)} Test</div>
+                      <div className={style.stakingRight}>{userPendingRewards.toFixed(5)} BEAN</div>
                   </div>   
                       <div className={style.StakingData} style={{visibility: lockTime > 0 ? 'visible' : 'hidden'}}>
                           <div className={style.stakingLeft}>Lock Date:</div>
@@ -236,7 +236,7 @@ const JoinJuryPage = () => {
                         <section className="LockBox">
                             {confirming === false ?
                                 <>
-                                    <p className='Text1'>Please approve Test Token first</p>
+                                    <p className='Text1'>Please approve BEAN Token first</p>
                                     <button disabled={confirming === false ? false : true} onClick={() => onTokenAllowance()} className="LockButton">
                                     Approve Staking
                                     </button>
