@@ -216,8 +216,8 @@ const JoinJuryPage = () => {
                           <div className={style.stakingLeft}>Unlock Date:</div>
                           <div className={style.stakingMiddle}></div>
                           <div className={style.stakingRight}>{userenableunlockingTime.toJSON().slice(0,10).split('-').reverse().join('/')}</div>
-                      </div>     
-                </div>                     
+                      </div>
+                </div>
                 <div className={style.flex_container}>
                     <div>
                         <section className='inputPanel'>
@@ -230,8 +230,8 @@ const JoinJuryPage = () => {
                                 value={tokenAmount}
                             />
                             <p onClick={() => setMaxAmount()} className="MaxButton">Max</p>
-                        </section>  
-                    </div>                   
+                        </section>
+                    </div>
                        {(Number(tokenAmount) > Number(allowance) && Number(tokenBalance) !== 0) ?
                         <section className="LockBox">
                             {confirming === false ?
@@ -252,12 +252,12 @@ const JoinJuryPage = () => {
                                   />
                                 </>
                             }
-                        </section>    
-                        :       
+                        </section>
+                        :
                         <>
                         <section>
-                        {err?<p className="Text1" style={{textAlign:'center'}}>{err}</p>:<></>}                        
-                        </section>                        
+                        {err?<p className="Text1" style={{textAlign:'center'}}>{err}</p>:<></>}
+                        </section>
                         <section className="claimBox">
                           {confirming === false ?
                             <>

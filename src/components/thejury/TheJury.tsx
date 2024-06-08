@@ -14,9 +14,9 @@ const TheJury: React.FC<{}> = () => {
                     <p style={{maxWidth:'500px', wordWrap:'break-word'}}>Standing for meme culture on chain! Join the Jury to hear Beanie’s Pledge while receiving a cheeky $BEAN for your service</p>
                     <br/>
                     <br/>
-                    <a className={style.joinbtn} href="#">Coming soon</a>
+                    <a className={style.joinbtn} href="joinjury">JOIN THE JURY</a>
                 </div>
-            </div>            
+            </div>
         </div>
     )
 }

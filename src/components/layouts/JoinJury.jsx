@@ -14,7 +14,7 @@ const JoinJury = () => {
 
     const onConnect = async () => {
       await open();
-    };    
+    };
 
     const onConnectWallet = async () => {
         await open();
@@ -54,7 +54,7 @@ const JoinJury = () => {
         <div className={style.flex_container}>
             <div className={style.backbtn}>
                 <a href="/">Back</a>
-            </div>                          
+            </div>
             <div className={style.enter}>
                 <h2>ENTER APP</h2>
                 <br/>
