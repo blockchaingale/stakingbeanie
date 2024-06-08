@@ -67,7 +67,7 @@ const JoinJuryPage = () => {
             console.error(e)
           }
         }
-        if (isConnected === true && chain?.id === 11155111 && address && (confirming === false)) {
+        if (isConnected === true && chain?.id === 8453 && address && (confirming === false)) {
           FetchStakingData();
         }
       }, [isConnected, address, chain, confirming])

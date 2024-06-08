@@ -18,7 +18,7 @@ const Tokenomics: React.FC<{}> = () => {
             console.error(e)
           }
         }
-        if (isConnected === true && chain?.id === 11155111 && address) {
+        if (isConnected === true && chain?.id === 8453 && address) {
           FetchStakingData();
         }
       }, [isConnected, address, chain])    
