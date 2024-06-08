@@ -10,7 +10,7 @@ import Footer from "./container/Footer.tsx";
 import JoinJury from "./components/layouts/JoinJury";
 import { QueryParamProvider } from 'use-query-params';
 import { WagmiConfig, createConfig, configureChains } from 'wagmi'
-import { mainnet, sepolia, bscTestnet } from 'wagmi/chains'
+import { mainnet, sepolia, bscTestnet, base } from 'wagmi/chains'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
@@ -22,7 +22,7 @@ import "./styles/icon.css";
 const projectId = '9dd8a1f80d3099bbdc29bebd194b03e7'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, sepolia, bscTestnet],
+  [mainnet, sepolia, bscTestnet, base],
   [w3mProvider({ projectId })],
 )
 
