@@ -187,12 +187,12 @@ const JoinJuryPage = () => {
                     <a href="/">Back</a>
                 </div>
                 <div className={style.Staking}>
-                  {/* <div className={style.StakingData}>
+                   <div className={style.StakingData}>
                       <div className={style.stakingLeft}>TVL :</div>
                       <div className={style.stakingMiddle}></div>
-                      <div className={style.stakingRight}>{tvl.toFixed(2)} Test</div>
+                      <div className={style.stakingRight}>{tvl.toFixed(2)} BEAN</div>
                   </div>
-                  <div className={style.StakingData}>
+                  {/*<div className={style.StakingData}>
                       <div className={style.stakingLeft}>APY :</div>
                       <div className={style.stakingMiddle}></div>
                       <div className={style.stakingRight}>{Number(apy).toFixed(2)} %</div>
