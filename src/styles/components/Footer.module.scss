@@ -1,6 +1,5 @@
 .footer {
     margin: auto;
-    margin-top: 40px;
     padding: 20px;
 }
 
@@ -36,6 +35,11 @@
     width: 64px;
     padding: 10px;
  }
+
+ .iconm {
+    width: 128px;
+    padding: 10px;
+ }
  
  .icon:hover path {
     fill: #3396FF;
@@ -51,6 +55,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .iconm {
+        width: 18vw;
+        padding: 10px;
+     }    
     .icon {
         width: 12vw;
         padding: 1vw;
